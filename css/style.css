@@ -1138,3 +1138,73 @@ section {
 	padding: 120px 0;
 	background: var(--navy);
 }
+
+
+
+/* ── GRANDS ÉCRANS (1400px+) ─────────────────────────────────── */
+@media (min-width: 1400px) {
+
+	/* Limiter la largeur du contenu pour éviter que ça s'étire trop */
+	.container {
+		max-width: 1320px;
+	}
+
+	/* Hero — augmenter les tailles de texte */
+	.hero-text-content h1 {
+		font-size: 3.5rem;
+	}
+
+	.int-hero-title {
+		font-size: 6rem;
+	}
+
+	/* Hero visuel — plus de place pour l'image */
+	.hero-visual-area {
+		width: 60%;
+	}
+
+	.hero-text-content {
+		width: 40%;
+		padding: 0 5%;
+	}
+
+	/* Cards — plus d'espace intérieur */
+	.int-service-card,
+	.feature-card,
+	.pricing-card {
+		padding: 44px 36px;
+	}
+
+	/* Sections — plus d'espace vertical */
+	section,
+	.pos-about,
+	.pos-features,
+	.int-services,
+	.int-region {
+		padding: 120px 0;
+	}
+}
+
+/* ── TRÈS GRANDS ÉCRANS (1920px+) ───────────────────────────── */
+@media (min-width: 1920px) {
+
+	body {
+		font-size: 18px;
+	}
+
+	.container {
+		max-width: 1600px;
+	}
+
+	.hero-text-content h1 {
+		font-size: 4.5rem;
+	}
+
+	.int-hero-title {
+		font-size: 7.5rem;
+	}
+
+	.team-card .card-img-top {
+		height: 320px;
+	}
+}

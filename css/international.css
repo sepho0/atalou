@@ -1228,3 +1228,73 @@ body {
 .lang-dropdown-menu .dropdown-item span {
 	font-size: 1.1rem;
 }
+
+
+/* ── FIXES GRANDS ÉCRANS ─────────────────────────────────── */
+@media (min-width: 1200px) {
+
+	/* NAVBAR — centrer et limiter la largeur */
+	.int-navbar .container {
+		max-width: 1140px;
+		padding: 0 24px;
+	}
+
+	/* HERO — aligner image et carte côte à côte correctement */
+	.int-hero .container {
+		max-width: 1140px;
+	}
+
+	/* Image hero — plus grande */
+@media (min-width: 992px) {
+	.hero-logo-img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 16px;
+		box-shadow: var(--shadow-card);
+	}
+}
+
+	/* Carte stats — remonter */
+	.hero-visual-card {
+		margin-top: 0;
+	}
+
+	/* Float tags — empêcher qu'ils débordent */
+	.tag-2 {
+		right: 10px;
+		top: 16px;
+	}
+
+	.tag-3 {
+		right: 10px;
+		bottom: 60px;
+	}
+
+	.float-tag {
+		max-width: 140px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+@media (min-width: 1400px) {
+
+	.int-navbar .container,
+	.int-hero .container {
+		max-width: 1320px;
+	}
+
+	.hero-logo-img {
+		max-width: 560px;
+	}
+
+	/* Stats grid — plus grand */
+	.stat-number {
+		font-size: 2.8rem;
+	}
+
+	.hero-visual-card {
+		padding: 48px;
+	}
+}
