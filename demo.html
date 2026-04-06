@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Request a Demo – Atalou Microsystem</title>
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+		rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		:root {
+			--dark-blue: #0a192f;
+			--medium-blue: #112240;
+			--accent-color: #64ffda;
+			--light-slate: #ccd6f6;
+			--lightest-slate: #e6f1ff;
+		}
+
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			font-family: 'Inter', sans-serif;
+			background: linear-gradient(to bottom, #0a192f 0%, #0d1f3a 100%);
+			color: var(--lightest-slate);
+		}
+
+		.page-wrapper {
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 24px;
+		}
+
+		.demo-card {
+			width: 100%;
+			max-width: 520px;
+			background: rgba(17, 34, 64, 0.85);
+			backdrop-filter: blur(12px);
+			border-radius: 16px;
+			padding: 3rem;
+			box-shadow:
+				0 20px 40px rgba(0, 0, 0, 0.45),
+				inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+		}
+
+		.demo-card h1 {
+			font-family: 'Playfair Display', serif;
+			font-size: 2rem;
+			text-align: center;
+			margin-bottom: 0.5rem;
+			color: var(--lightest-slate);
+		}
+
+		.demo-card p.subtitle {
+			text-align: center;
+			color: var(--light-slate);
+			font-size: 0.95rem;
+			margin-bottom: 2.5rem;
+		}
+
+		.form-label {
+			font-weight: 600;
+			color: var(--light-slate);
+			margin-bottom: 6px;
+		}
+
+		.form-control,
+		.form-select {
+			background: rgba(255, 255, 255, 0.05);
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			color: var(--lightest-slate);
+			padding: 0.7rem 0.75rem;
+		}
+
+		.form-select {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2364ffda' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+			background-repeat: no-repeat;
+			background-position: right 0.75rem center;
+			background-size: 16px 12px;
+			padding-right: 2.5rem;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+
+		.form-select option {
+			background: #112240;
+			color: var(--lightest-slate);
+		}
+
+		.form-control::placeholder {
+			color: rgba(230, 241, 255, 0.5);
+		}
+
+		.form-control:focus,
+		.form-select:focus {
+			background: rgba(255, 255, 255, 0.08);
+			border-color: var(--accent-color);
+			box-shadow: 0 0 0 0.15rem rgba(100, 255, 218, 0.25);
+			color: var(--lightest-slate);
+		}
+
+		textarea.form-control {
+			resize: none;
+		}
+
+		.btn-submit {
+			margin-top: 1.5rem;
+			width: 100%;
+			background: var(--accent-color);
+			color: var(--dark-blue);
+			font-weight: 700;
+			padding: 0.75rem;
+			border-radius: 10px;
+			border: none;
+			transition: all 0.3s ease;
+			cursor: pointer;
+		}
+
+		.btn-submit:hover {
+			background: #52e1c9;
+			transform: translateY(-2px);
+		}
+
+		#status {
+			margin-top: 1rem;
+			text-align: center;
+			font-size: 0.9rem;
+		}
+
+		@media (max-width: 576px) {
+			.demo-card {
+				padding: 2rem 1.75rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="page-wrapper">
+		<div class="demo-card">
+
+			<h1 id="demo-title">Demander une Démonstration</h1>
+			<p class="subtitle" id="demo-subtitle">
+				Découvrez comment Atalou Microsystem peut optimiser vos opérations.
+			</p>
+
+			<form id="demo-form">
+
+				<!-- Prénom -->
+				<div class="mb-3">
+					<label class="form-label" id="label-fname">Prénom</label>
+					<input type="text" class="form-control" name="first_name" required>
+				</div>
+
+				<!-- Nom -->
+				<div class="mb-3">
+					<label class="form-label" id="label-lname">Nom</label>
+					<input type="text" class="form-control" name="last_name" required>
+				</div>
+
+				<!-- Email -->
+				<div class="mb-3">
+					<label class="form-label" id="label-email">Adresse E-mail</label>
+					<input type="email" class="form-control" name="email" required>
+				</div>
+
+				<!-- Téléphone -->
+				<div class="mb-3">
+					<label class="form-label" id="label-phone">Numéro de Téléphone</label>
+					<input type="tel" class="form-control" name="phone">
+				</div>
+
+				<!-- Pays -->
+				<div class="mb-3">
+					<label class="form-label" id="label-country">Pays</label>
+					<select class="form-select" name="country" id="country-select" required>
+						<option value="" disabled selected id="country-placeholder">— Sélectionner votre pays —</option>
+						<option value="Haiti" id="country-haiti">🇭🇹 Haïti</option>
+						<option value="United States" id="country-usa">🇺🇸 États-Unis</option>
+						<option value="Dominican Republic" id="country-dom">🇩🇴 République Dominicaine</option>
+						<option value="Jamaica" id="country-jm">🇯🇲 Jamaïque</option>
+						<option value="Caribbean" id="country-carib">🌎 Autres Caraïbes</option>
+					</select>
+				</div>
+
+				<!-- Message -->
+				<div class="mb-3">
+					<label class="form-label" id="label-message">Message</label>
+					<textarea class="form-control" name="message" rows="3"></textarea>
+				</div>
+
+				<div id="status"></div>
+
+				<button type="submit" class="btn-submit" id="btn-submit-demo">
+					Envoyer la Demande
+				</button>
+
+			</form>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+	<script src="translates/international.js"></script>
+
+	<script>
+		emailjs.init("ooXSPg6L406knWIN7");
+
+		document.getElementById('demo-form').addEventListener('submit', function (e) {
+			e.preventDefault();
+
+			const status = document.getElementById('status');
+			const lang = localStorage.getItem('atalou_pref_lang') || 'fr';
+
+			const messages = {
+				fr: { sending: 'Envoi en cours...', success: 'Votre demande a été envoyée avec succès.', error: 'Une erreur est survenue. Veuillez réessayer.' },
+				en: { sending: 'Sending...', success: 'Your request has been sent successfully.', error: 'An error occurred. Please try again.' },
+				es: { sending: 'Enviando...', success: 'Su solicitud ha sido enviada con éxito.', error: 'Ocurrió un error. Por favor intente de nuevo.' }
+			};
+			const msg = messages[lang] || messages['fr'];
+
+			status.style.color = "#64ffda";
+			status.textContent = msg.sending;
+
+			emailjs.sendForm('service_1pg74dh', 'template_waqhd5l', this)
+				.then(() => {
+					status.textContent = msg.success;
+					this.reset();
+				})
+				.catch(() => {
+					status.style.color = "#ff6b6b";
+					status.textContent = msg.error;
+				});
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Support & Maintenance | Atalou Microsystem</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<style>
+		:root {
+			--dark-blue: #0a192f;
+			--medium-blue: #112240;
+			--accent-color: #64ffda;
+			--light-slate: #ccd6f6;
+			--lightest-slate: #e6f1ff;
+			--shadow-color: rgba(2, 12, 27, 0.7);
+		}
+
+		body {
+			background-color: var(--dark-blue);
+			color: var(--light-slate);
+			font-family: 'Segoe UI', sans-serif;
+		}
+
+		.page-header {
+			padding: 100px 0 60px;
+			text-align: center;
+		}
+
+		.page-header h1 {
+			color: var(--lightest-slate);
+			font-weight: 700;
+		}
+
+		.page-header p {
+			max-width: 700px;
+			margin: 20px auto 0;
+			font-size: 1.1rem;
+		}
+
+		.service-card {
+			background: var(--medium-blue);
+			border: none;
+			border-radius: 20px;
+			box-shadow: 0 20px 40px var(--shadow-color);
+			transition: transform 0.4s ease, box-shadow 0.4s ease;
+			height: 100%;
+			color: #ffffff;
+		}
+
+		.service-card:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 30px 60px var(--shadow-color);
+		}
+
+		.service-icon {
+			width: 70px;
+			height: 70px;
+			background: rgba(100, 255, 218, 0.15);
+			color: var(--accent-color);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			font-size: 30px;
+			margin: 0 auto 20px;
+		}
+
+		.service-card h4,
+		.service-card p,
+		.service-card li {
+			color: #ffffff;
+		}
+
+		.back-btn {
+			color: var(--accent-color);
+			text-decoration: none;
+			font-weight: 500;
+		}
+
+		.back-btn i {
+			margin-right: 8px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<section class="page-header">
+		<div class="container">
+			<h1 data-aos="fade-down" data-i18n="support_page_title">Support & Maintenance IT</h1>
+			<p data-aos="fade-up" data-i18n="support_page_sub">
+				Des solutions fiables, sécurisées et évolutives pour assurer la continuité,
+				la performance et la sécurité de votre infrastructure technologique.
+			</p>
+		</div>
+	</section>
+
+	<!-- SERVICES -->
+	<section class="pb-5">
+		<div class="container">
+			<div class="row g-4">
+
+				<!-- Service 1 -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up">
+					<div class="card service-card p-4">
+						<div class="service-icon">
+							<i class="fas fa-network-wired"></i>
+						</div>
+						<h4 data-i18n="support_s1_title">Mise en place & optimisation des réseaux</h4>
+						<p data-i18n="support_s1_text">
+							Nous concevons et déployons des réseaux performants et sécurisés,
+							adaptés à votre activité. Grâce à une surveillance proactive,
+							nous anticipons les pannes et améliorons la vitesse,
+							la stabilité et la disponibilité de votre infrastructure.
+						</p>
+					</div>
+				</div>
+
+				<!-- Service 2 -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+					<div class="card service-card p-4">
+						<div class="service-icon">
+							<i class="fas fa-fire-extinguisher"></i>
+						</div>
+						<h4 data-i18n="support_s2_title">Alarmes & détection incendie</h4>
+						<p data-i18n="support_s2_text">
+							Protection intelligente de vos locaux grâce à des systèmes
+							de détection incendie fiables et conformes aux normes.
+							Alertes rapides, prévention des risques et sécurité renforcée
+							pour vos équipes et vos équipements.
+						</p>
+					</div>
+				</div>
+
+				<!-- Service 3 -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+					<div class="card service-card p-4">
+						<div class="service-icon">
+							<i class="fas fa-video"></i>
+						</div>
+						<h4 data-i18n="support_s3_title">Vidéosurveillance intelligente</h4>
+						<p data-i18n="support_s3_text">
+							Installation de systèmes de vidéosurveillance modernes
+							permettant un contrôle en temps réel, un accès à distance
+							et un enregistrement sécurisé pour une protection optimale
+							contre les intrusions.
+						</p>
+					</div>
+				</div>
+
+				<!-- Service 4 -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up">
+					<div class="card service-card p-4">
+						<div class="service-icon">
+							<i class="fas fa-tools"></i>
+						</div>
+						<h4 data-i18n="support_s4_title">Maintenance réseaux physiques & logiques</h4>
+						<p data-i18n="support_s4_text">
+							Maintenance préventive et corrective de vos équipements,
+							câblages, serveurs et configurations logicielles afin
+							d'assurer une infrastructure stable, sécurisée et évolutive.
+						</p>
+					</div>
+				</div>
+
+				<!-- Service 5 -->
+				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+					<div class="card service-card p-4">
+						<div class="service-icon">
+							<i class="fas fa-headset"></i>
+						</div>
+						<h4 data-i18n="support_s5_title">Réparation & support continu</h4>
+						<p data-i18n="support_s5_text">
+							Assistance technique réactive, diagnostic rapide et solutions
+							durables pour limiter les interruptions.
+							Notre support continu garantit la continuité de vos opérations
+							et la tranquillité de votre entreprise.
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="text-center mt-5" data-aos="fade-up">
+				<a href="../Page2.html#services" class="back-btn">
+					<i class="fas fa-arrow-left"></i>
+					<span data-i18n="back_to_services">Retour aux services</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="../translates/international.js"></script>
+	<script>
+		AOS.init({ duration: 900, once: true });
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+/* ── SIGNAGE CUSTOM STYLES ── */
+:root {
+	--signage-glow: rgba(100, 255, 218, 0.15);
+}
+
+/* On réutilise tes variables globales mais avec des structures propres */
+.signage-hero {
+	padding: 140px 0 80px;
+	background: radial-gradient(circle at 15% 50%, rgba(29, 52, 97, 0.8) 0%, transparent 70%), var(--dark-navy);
+	min-height: auto;
+}
+
+.signage-badge {
+	color: var(--accent);
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: .75rem;
+	text-transform: uppercase;
+	background: var(--accent-dim);
+	border: 1px solid var(--accent-border);
+	padding: 6px 16px;
+	border-radius: 100px;
+	display: inline-block;
+}
+
+/* LA SOLUTION POUR TON IMAGE COUPÉE */
+.signage-img-container {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: visible !important;
+	/* On s'assure que rien ne coupe l'image */
+}
+
+.signage-main-img {
+	width: 100%;
+	height: auto !important;
+	/* Hauteur flexible selon l'image réelle */
+	max-height: none !important;
+	/* Supprime toute limite de 400px du POS */
+	display: block;
+	border-radius: var(--radius-md);
+	border: 1px solid var(--card-border);
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+	transition: transform 0.3s ease;
+}
+
+.signage-main-img:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-glow);
+}
+
+.signage-about {
+	background-color: var(--navy);
+	padding: 100px 0;
+}
+
+.signage-features {
+	background-color: var(--dark-navy);
+	padding: 100px 0;
+}
+
+.signage-card {
+	background: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: var(--radius-md);
+	padding: 30px;
+	height: 100%;
+	transition: all 0.3s ease;
+}
+
+.signage-card:hover {
+	border-color: var(--accent);
+	background: rgba(100, 255, 218, 0.03);
+}
+
+.signage-cta {
+	padding: 100px 0;
+	background: var(--navy);
+	border-top: 1px solid var(--card-border);
+}
