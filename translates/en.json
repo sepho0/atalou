@@ -105,6 +105,12 @@
   "services_other_f3": "Custom research and R&D of technology solutions",
   "services_other_f4": "ATA point of sale system (ATA POS)",
 
+		"svc_desc_8": "IT equipment sales, GPS geolocation systems, and custom technology R&D solutions.",
+ 
+"svc_name_9": "Payroll",
+"svc_desc_9": "Automate payroll processing, leave management, and social declarations.",
+ 
+
   "services_view_more": "See More",
 
   "part_tag": "Partners",
@@ -285,8 +291,71 @@
   "sig_f2_text": "Capture 400% more attention than a static poster thanks to animated content.",
   "sig_f3_title": "Cost Reduction",
   "sig_f3_text": "Eliminate printing costs and delivery delays for your advertising materials.",
-  "sig_cta_title": "Ready to energize your screens?"
+  "sig_cta_title": "Ready to energize your screens?",
 
+
+		"payroll_page_title":        "Atapayroll – Payroll Management | Atalou Microsystem",
+
+"payroll_nav_home":          "Home",
+"payroll_nav_about":         "About",
+"payroll_nav_features":      "Features",
+"payroll_nav_how":           "How it works",
+"payroll_nav_contact":       "Contact",
+
+"payroll_badge":             "Payroll Management",
+"payroll_hero_title_1":      "AtaPayroll",
+
+"payroll_hero_text":         "A complete solution to automate payroll management, leave tracking, and social declarations — tailored for all businesses and everywhere.",
+"payroll_hero_btn_contact":  "Contact us",
+"payroll_hero_btn_features": "See features",
+
+"payroll_stat1":             "Compliant",
+"payroll_stat2":             "Active support",
+"payroll_stat3":             "Multi-currency",
+
+"payroll_about_title":       "What is AtaPayroll?",
+"payroll_about_p1":          "Atapayroll is a payroll management solution designed for businesses operating in Haiti and the Caribbean. It automates the full payroll cycle: salary calculations, social contributions, leave management, and pay slip generation.",
+"payroll_about_p2":          "With an intuitive interface and compliance with local regulations, it allows HR teams to save time, reduce errors, and ensure transparency in salary processing.",
+"payroll_about_p3":          "Compatible with local  and international  currencies, it adapts to organizations of all sizes SMEs, large enterprises, and NGOs.",
+
+"payroll_features_title":    "Why choose AtaPayroll?",
+
+"payroll_feature1_title":    "Automated payroll calculation",
+"payroll_feature1_text":     "Base salaries, overtime, bonuses, and deductions calculated automatically at every pay cycle.",
+"payroll_feature2_title":    "Instant pay slips",
+"payroll_feature2_text":     "Digital generation and distribution of pay slips in one click, accessible anytime by employees.",
+"payroll_feature3_title":    "Leave & absence management",
+"payroll_feature3_text":     "Real-time tracking of annual leave, sick days, maternity, and absences with automatic payroll impact.",
+"payroll_feature4_title":    "Regulatory compliance",
+"payroll_feature4_text":     "Compliance with Haitian legal requirements: ONA, OFATMA contributions, income tax, and social declarations.",
+"payroll_feature5_title":    "Multi-currency",
+"payroll_feature5_text":     "Simultaneous management in all currencies on employee contracts.",
+"payroll_feature6_title":    "HR reports & analytics",
+"payroll_feature6_text":     "Dashboards and detailed reports on payroll costs, department breakdowns, and HR trends.",
+"payroll_feature7_title":    "Multi-employee management",
+"payroll_feature7_text":     "Manage tens or hundreds of employees with individualized profiles, grades, and pay structures.",
+"payroll_feature8_title":    "Security & confidentiality",
+"payroll_feature8_text":     "Encrypted data, role-based access, and audit logs to ensure salary information confidentiality.",
+"payroll_feature9_title":    "Easy integration",
+"payroll_feature9_text":     "Compatible with your existing tools: QuickBooks, ACCPAC, biometric time clocks, and ATAPOS.",
+
+"payroll_how_title":         "How does it work?",
+"payroll_how_sub":           "A simple, structured process to ensure accurate payroll every cycle.",
+
+"payroll_step1_title":       "Employee setup",
+"payroll_step1_text":        "Create employee profiles: contract, base salary, benefits, contributions, and department.",
+"payroll_step2_title":       "Monthly data collection",
+"payroll_step2_text":        "The system automatically integrates absences, overtime, and bonuses for the period.",
+"payroll_step3_title":       "Calculation & validation",
+"payroll_step3_text":        "Payroll is calculated automatically. The HR manager validates or adjusts before finalizing.",
+"payroll_step4_title":       "Pay slip distribution",
+"payroll_step4_text":        "Pay slips are generated and sent digitally to each employee in seconds.",
+"payroll_step5_title":       "Reports & archiving",
+"payroll_step5_text":        "All payroll cycles are archived and accessible for audits, tax declarations, or HR analysis.",
+
+"payroll_cta_title":         "Ready to simplify your payroll management?",
+"payroll_cta_sub":           "Contact our team for a personalized demonstration and discover how Atalou Payroll can transform your HR department.",
+"payroll_cta_btn":           "Request a demonstration"
 }
 
 

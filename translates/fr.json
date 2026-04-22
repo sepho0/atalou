@@ -105,6 +105,12 @@
   "services_other_f3": "Recherche personnalisée et R&D de solutions technologiques",
   "services_other_f4": "Système de point de vente ATA (ATA POS)",
 
+
+		"svc_desc_8": "Vente d'équipements informatiques, géolocalisation GPS et R&D de solutions technologiques sur mesure.",
+ 
+"svc_name_9": "Payroll",
+"svc_desc_9": "Automatisez la gestion de votre paie, des congés et des déclarations sociales.",
+
   "services_view_more": "Voir Plus",
 
   "part_tag": "Partenaires",
@@ -283,6 +289,69 @@
   "sig_feature2_text": "Diffusez des vidéos 4K, des images, des flux RSS ou même des pages web en direct.",
   "sig_feature3_title": "Planification intelligente",
   "sig_feature3_text": "Programmez vos contenus par heure, jour ou événement spécial automatiquement.",
-  "sig_cta_title": "Prêt à moderniser votre communication ?"
+  "sig_cta_title": "Prêt à moderniser votre communication ?",
 
+
+"payroll_page_title": "Payroll – Gestion de la paie | Atalou Microsystem",
+
+"payroll_nav_home":     "Accueil",
+"payroll_nav_about":    "À propos",
+"payroll_nav_features": "Fonctionnalités",
+"payroll_nav_how":      "Fonctionnement",
+"payroll_nav_contact":  "Contact",
+
+"payroll_badge":          "Gestion de la paie",
+"payroll_hero_title_1":   "AtaPayroll",
+"payroll_hero_title_2":   "par Atalou",
+"payroll_hero_text":      "Une solution complète pour automatiser la gestion de votre paie, des congés et des déclarations sociales  adaptée à toutes entreprises et partout.",
+"payroll_hero_btn_contact":  "Nous contacter",
+"payroll_hero_btn_features": "Voir les fonctionnalités",
+
+"payroll_stat1": "Conforme",
+"payroll_stat2": "Support actif",
+"payroll_stat3": "Multi-devises",
+
+"payroll_about_title": "Qu'est-ce que AtaPayroll ?",
+"payroll_about_p1":    "Payroll Atalou est une solution de gestion de la paie conçue pour les entreprises opérant en Haïti et dans les Caraïbes. Elle automatise l'ensemble du cycle de rémunération : calcul des salaires, cotisations sociales, gestion des absences et génération des bulletins de paie.",
+"payroll_about_p2":    "Grâce à une interface intuitive et une conformité aux réglementations locales, elle permet aux équipes RH de gagner du temps, de réduire les erreurs et d'assurer la transparence des traitements salariaux.",
+"payroll_about_p3":    " elle s'adapte aux structures de toutes tailles PME, grandes entreprises, ONG.",
+
+"payroll_features_title": "Pourquoi choisir AtaPayroll ?",
+
+"payroll_feature1_title": "Calcul automatique de la paie",
+"payroll_feature1_text":  "Salaires de base, heures supplémentaires, primes et retenues calculés automatiquement à chaque cycle de paie.",
+"payroll_feature2_title": "Bulletins de paie instantanés",
+"payroll_feature2_text":  "Génération et distribution numérique des bulletins de paie en un clic, accessibles à tout moment par les employés.",
+"payroll_feature3_title": "Gestion des congés & absences",
+"payroll_feature3_text":  "Suivi en temps réel des congés annuels, maladie, maternité et absences avec impact automatique sur la paie.",
+"payroll_feature4_title": "Conformité réglementaire",
+"payroll_feature4_text":  "Respect des obligations légales haïtiennes : cotisations ONA, OFATMA, impôt sur le revenu et déclarations sociales.",
+"payroll_feature5_title": "Multi-devises",
+"payroll_feature5_text":  "Gestion simultanée dans toutes les devises,selon les contrats de vos employés.",
+"payroll_feature6_title": "Rapports & analyses RH",
+"payroll_feature6_text":  "Tableaux de bord et rapports détaillés sur la masse salariale, les coûts par département et les tendances RH.",
+"payroll_feature7_title": "Gestion multi-employés",
+"payroll_feature7_text":  "Gérez des dizaines ou des centaines d'employés avec des profils individualisés, des grades et des structures de paie différentes.",
+"payroll_feature8_title": "Sécurité & confidentialité",
+"payroll_feature8_text":  "Données chiffrées, accès par rôles et journaux d'audit pour garantir la confidentialité des informations salariales.",
+"payroll_feature9_title": "Intégration facile",
+"payroll_feature9_text":  "Compatible avec vos outils existants : QuickBooks, ACCPAC, pointeuse biométrique et ATAPOS.",
+
+"payroll_how_title": "Comment ça fonctionne ?",
+"payroll_how_sub":   "Un processus simple et structuré pour garantir une paie précise à chaque cycle.",
+
+"payroll_step1_title": "Configuration des employés",
+"payroll_step1_text":  "Créez les profils de vos employés : contrat, salaire de base, avantages, cotisations et département.",
+"payroll_step2_title": "Collecte des données du mois",
+"payroll_step2_text":  "Le système intègre automatiquement les absences, heures supplémentaires et primes de la période.",
+"payroll_step3_title": "Calcul & validation",
+"payroll_step3_text":  "La paie est calculée automatiquement. Le responsable RH valide ou ajuste avant finalisation.",
+"payroll_step4_title": "Distribution des bulletins",
+"payroll_step4_text":  "Les bulletins de paie sont générés et envoyés numériquement à chaque employé en quelques secondes.",
+"payroll_step5_title": "Rapports & archivage",
+"payroll_step5_text":  "Tous les cycles de paie sont archivés et accessibles pour audit, déclarations fiscales ou analyses RH.",
+
+"payroll_cta_title": "Prêt à simplifier votre gestion de la paie ?",
+"payroll_cta_sub":   "Contactez notre équipe pour une démonstration personnalisée et découvrez comment Payroll Atalou peut transformer votre département RH.",
+"payroll_cta_btn":   "Demander une démonstration"
 }

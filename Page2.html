@@ -25,9 +25,11 @@
 <nav class="navbar navbar-expand-lg navbar-light">
 
 			<div class="container">
-				<a class="navbar-brand" href="#slider">
-					
-					<img src="image/logo.png" alt="Logo Atalou Microsystem">
+				<a class="navbar-brand" href="#">
+					<!-- Logo dark mode (visible par défaut) -->
+					<img src="image/LOGO2.png" alt="Atalou Microsystem" class="logo-dark">
+					<!-- Logo light mode (visible en light) -->
+					<img src="image/logo.png" alt="Atalou Microsystem" class="logo-light">
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
@@ -41,6 +43,12 @@
 						<li class="nav-item"><a class="nav-link" href="#team"data-i18n="nav.team">Équipe</a></li>
 						<li class="nav-item"><a class="nav-link" href="#contact"data-i18n="nav.contact">Contact</a></li>
 						
+						<li class="nav-item d-flex align-items-center ms-2">
+							<button class="theme-toggle-btn" id="themeToggle">
+								<span class="toggle-track"><span class="toggle-thumb"></span></span>
+								<span class="toggle-icon" id="toggleIcon">🌙</span>
+							</button>
+						</li>
 					</ul>
 
 
@@ -634,6 +642,20 @@
 	});
 
 	
+
+		(function(){
+  const btn = document.getElementById('themeToggle');
+		const icon = document.getElementById('toggleIcon');
+		if(localStorage.getItem('atalou_theme')==='light'){
+			document.body.classList.add('light-mode');
+		if(icon) icon.textContent='☀️';
+  }
+  if(btn) btn.addEventListener('click',()=>{
+    const isLight = document.body.classList.toggle('light-mode');
+		icon.textContent = isLight ? '☀️' : '🌙';
+		localStorage.setItem('atalou_theme', isLight ? 'light' : 'dark');
+  });
+})();
 
 	
 

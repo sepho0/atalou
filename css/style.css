@@ -1,34 +1,55 @@
+/* ============================================================
+   ATALOU MICROSYSTEM — style.css
+   Palette : Neon Mint #36ECDE · Core Navy #00203F
+   Dark mode par défaut · Light mode via .light-mode sur body
+   ============================================================ */
 
+/* ── VARIABLES DARK MODE (défaut) ───────────────────────────── */
 :root {
-	--dark-navy: #0a192f;
-	--navy: #112240;
-	--navy-light: #1d3461;
+	--dark-navy: #00203F;
+	--navy: #002d57;
+	--navy-light: #003d75;
 	--slate: #8892b0;
 	--light-slate: #a8b2d8;
 	--lightest-slate: #ccd6f6;
-	--white: #e6f1ff;
-	--accent: #64ffda;
-	--accent-color: #64ffda;
-	/* alias for legacy selectors */
-	--accent-dim: rgba(100, 255, 218, 0.10);
-	--accent-border: rgba(100, 255, 218, 0.25);
-	--card-bg: rgba(17, 34, 64, 0.80);
-	--card-border: rgba(100, 255, 218, 0.10);
-	--dark-blue: #0a192f;
-	/* legacy alias */
-	--medium-blue: #112240;
-	/* legacy alias */
-	--shadow-color: rgba(2, 12, 27, 0.7);
+	--white: #E6E9EC;
+	--accent: #36ECDE;
+	--accent-color: #36ECDE;
+	--accent-dim: rgba(54, 236, 222, 0.10);
+	--accent-border: rgba(54, 236, 222, 0.25);
+	--card-bg: rgba(0, 32, 63, 0.80);
+	--card-border: rgba(54, 236, 222, 0.12);
+	--shadow-color: rgba(0, 10, 25, 0.7);
+	--shadow-card: 0 8px 40px rgba(0, 0, 0, 0.45);
+	--shadow-glow: 0 0 40px rgba(54, 236, 222, 0.15);
 	--radius-sm: 8px;
 	--radius-md: 16px;
 	--radius-lg: 24px;
 	--font-display: 'Syne', sans-serif;
 	--font-body: 'Inter', sans-serif;
-	--shadow-card: 0 8px 40px rgba(0, 0, 0, 0.45);
-	--shadow-glow: 0 0 40px rgba(100, 255, 218, 0.12);
 }
 
+/* ── VARIABLES LIGHT MODE ────────────────────────────────────── */
+body.light-mode {
+	--dark-navy: #F8F5F0;
+	--navy: #EDE8E1;
+	--navy-light: #DDD6CB;
+	--slate: #5C5248;
+	--light-slate: #3D3530;
+	--lightest-slate: #1E1A16;
+	--white: #1E1A16;
+	--accent: #1A56DB;
+	--accent-color: #1A56DB;
+	--accent-dim: rgba(26, 86, 219, 0.10);
+	--accent-border: rgba(26, 86, 219, 0.28);
+	--card-bg: rgba(255, 252, 248, 0.95);
+	--card-border: rgba(26, 86, 219, 0.18);
+	--shadow-glow: 0 0 40px rgba(26, 86, 219, 0.10);
+	background-color: #F8F5F0 !important;
+	color: #1E1A16 !important;
+}
 
+/* ── RESET ───────────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -47,6 +68,7 @@ body {
 	font-size: 16px;
 	line-height: 1.6;
 	max-width: 100%;
+	transition: background-color 0.35s, color 0.35s;
 }
 
 ::selection {
@@ -67,7 +89,7 @@ body {
 	border-radius: 3px;
 }
 
-/* ── TYPOGRAPHY ─────────────────────────────────────────────── */
+/* ── TYPOGRAPHY ──────────────────────────────────────────────── */
 h1,
 h2,
 h3,
@@ -99,28 +121,29 @@ h6 {
 	border-radius: 2px;
 }
 
-/* ── SECTIONS ───────────────────────────────────────────────── */
+/* ── SECTIONS ────────────────────────────────────────────────── */
 section {
 	padding: 100px 0;
 	background-color: var(--dark-navy);
+	transition: background-color 0.35s;
 }
 
-/* ── NAVBAR ─────────────────────────────────────────────────── */
+/* ── NAVBAR ──────────────────────────────────────────────────── */
 .navbar {
 	position: sticky;
 	top: 0;
 	z-index: 1000;
 	padding: 14px 0;
-	background: rgba(78, 108, 152, 0.97);
+	background: rgba(0, 32, 63, 0.97);
 	border-bottom: 1px solid var(--card-border);
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
-	transition: padding .3s, box-shadow .3s, border-color .3s;
+	transition: padding .3s, box-shadow .3s, border-color .3s, background .3s;
 }
 
 .navbar.scrolled {
 	padding: 10px 0;
-	border-bottom-color: rgba(100, 255, 218, 0.2);
+	border-bottom-color: rgba(54, 236, 222, 0.3);
 	box-shadow: 0 4px 32px rgba(0, 0, 0, 0.45);
 }
 
@@ -130,7 +153,7 @@ section {
 }
 
 .navbar-nav .nav-link {
-	color: var(--accent) !important;
+	color: var(--white) !important;
 	font-size: .95rem;
 	font-weight: 600;
 	margin-left: .5rem;
@@ -143,6 +166,76 @@ section {
 
 .navbar-nav .nav-link:hover {
 	color: var(--accent) !important;
+	background: var(--accent-dim);
+	border-color: var(--accent-border);
+}
+
+/* Light mode navbar */
+body.light-mode .navbar {
+	background: rgba(214, 218, 222, 0.97) !important;
+	border-bottom-color: rgba(0, 122, 114, 0.25);
+}
+
+body.light-mode .navbar-nav .nav-link {
+	color: #2F2F2F !important;
+}
+
+body.light-mode .navbar-nav .nav-link:hover {
+	color: var(--accent) !important;
+}
+
+/* ── THEME TOGGLE NAVBAR ─────────────────────────────────────── */
+.theme-toggle-btn {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: var(--accent-dim);
+	border: 1.5px solid var(--accent-border);
+	border-radius: 100px;
+	padding: 5px 12px 5px 6px;
+	cursor: pointer;
+	transition: border-color .25s, background .25s, transform .2s;
+}
+
+.theme-toggle-btn:hover {
+	border-color: var(--accent);
+	background: rgba(54, 236, 222, 0.15);
+	transform: translateY(-1px);
+}
+
+.toggle-track {
+	position: relative;
+	width: 34px;
+	height: 18px;
+	background: var(--navy-light);
+	border-radius: 100px;
+	display: inline-block;
+	transition: background .25s;
+}
+
+body.light-mode .toggle-track {
+	background: var(--accent);
+}
+
+.toggle-thumb {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 12px;
+	height: 12px;
+	background: var(--accent);
+	border-radius: 50%;
+	transition: transform .25s, background .25s;
+}
+
+body.light-mode .toggle-thumb {
+	transform: translateX(16px);
+	background: #00203F;
+}
+
+.toggle-icon {
+	font-size: 0.85rem;
+	line-height: 1;
 }
 
 /* ── BUTTONS ─────────────────────────────────────────────────── */
@@ -153,14 +246,14 @@ section {
 	font-family: var(--font-body);
 	font-weight: 700;
 	transition: background .25s, color .25s, transform .2s, box-shadow .25s;
-	box-shadow: 0 4px 15px rgba(100, 255, 218, 0.15);
+	box-shadow: 0 4px 15px rgba(54, 236, 222, 0.15);
 }
 
 .btn-view-more:hover {
 	background: var(--accent-dim);
 	color: var(--accent);
 	transform: translateY(-2px);
-	box-shadow: 0 8px 24px rgba(100, 255, 218, 0.25);
+	box-shadow: 0 8px 24px rgba(54, 236, 222, 0.25);
 }
 
 /* ── HERO SLIDER ─────────────────────────────────────────────── */
@@ -241,7 +334,7 @@ section {
 	margin-right: 4px;
 }
 
-/* Swiper pagination dots — unified */
+/* Swiper pagination */
 .swiper-pagination-bullet {
 	background: var(--slate);
 	opacity: 1;
@@ -389,7 +482,7 @@ section {
 .partnerships,
 .clients {
 	padding: 60px 0;
-	background-color: rgba(78, 108, 152, 0.97);
+	background-color: var(--navy);
 }
 
 .partnerships h2,
@@ -409,7 +502,6 @@ section {
 .logo-track {
 	display: flex;
 	align-items: center;
-
 	gap: 60px;
 	width: max-content;
 	animation: marquee 18s linear infinite;
@@ -568,13 +660,11 @@ section {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   POS DETAILS PAGE (pos.details.html)
+   POS DETAILS PAGE
    ══════════════════════════════════════════════════════════════ */
-
-/* Hero */
 .pos-hero {
 	padding: 140px 0;
-	background: radial-gradient(ellipse at 20% 60%, rgba(29, 52, 97, 0.6) 0%, transparent 55%), var(--dark-navy);
+	background: radial-gradient(ellipse at 20% 60%, rgba(0, 61, 117, 0.6) 0%, transparent 55%), var(--dark-navy);
 }
 
 .pos-badge {
@@ -590,7 +680,6 @@ section {
 	display: inline-block;
 }
 
-/* Alternate section backgrounds */
 .pos-about,
 .pos-screens {
 	background-color: var(--navy);
@@ -603,7 +692,7 @@ section {
 
 .pos-cta {
 	padding: 120px 0;
-	background: radial-gradient(ellipse at 50% 80%, rgba(29, 52, 97, 0.4) 0%, transparent 60%), var(--navy);
+	background: radial-gradient(ellipse at 50% 80%, rgba(0, 61, 117, 0.4) 0%, transparent 60%), var(--navy);
 }
 
 .pos-about,
@@ -613,7 +702,6 @@ section {
 	padding: 100px 0;
 }
 
-/* Images */
 .pos-image {
 	width: 100%;
 	max-height: 400px;
@@ -644,7 +732,6 @@ section {
 	box-shadow: var(--shadow-card);
 }
 
-/* Features */
 .feature-card {
 	background: var(--card-bg);
 	border: 1px solid var(--card-border);
@@ -672,7 +759,7 @@ section {
 	font-size: .9rem;
 }
 
-/* Pricing */
+/* ── PRICING ─────────────────────────────────────────────────── */
 .pricing-card {
 	background: var(--card-bg);
 	border: 1px solid var(--card-border);
@@ -717,7 +804,7 @@ section {
 
 .pricing-card.highlight {
 	border-color: var(--accent-border);
-	box-shadow: 0 4px 30px rgba(100, 255, 218, 0.08);
+	box-shadow: 0 4px 30px rgba(54, 236, 222, 0.08);
 }
 
 .pricing-badge {
@@ -755,11 +842,11 @@ section {
 	left: 0;
 }
 
-/* Pricing popup overlay */
+/* ── PRICING POPUP ───────────────────────────────────────────── */
 .pricing-popup-overlay {
 	position: fixed;
 	inset: 0;
-	background: rgba(10, 25, 47, 0.9);
+	background: rgba(0, 10, 25, 0.9);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -911,7 +998,7 @@ section {
 	font-weight: 700;
 }
 
-/* Payment modal */
+/* ── PAYMENT MODAL ───────────────────────────────────────────── */
 .payment-modal .modal-content {
 	background-color: var(--navy) !important;
 	border: 1px solid var(--card-border);
@@ -945,7 +1032,7 @@ section {
 	padding: 14px;
 	border-radius: var(--radius-sm);
 	border: 1px solid var(--card-border);
-	background: rgba(10, 25, 47, 0.6);
+	background: rgba(0, 10, 30, 0.6);
 	cursor: pointer;
 	margin-bottom: 12px;
 	transition: all .25s;
@@ -978,7 +1065,6 @@ section {
 	color: var(--accent);
 }
 
-/* Btn confirm */
 #confirmPayment {
 	background: transparent;
 	color: var(--accent);
@@ -996,6 +1082,230 @@ section {
 #confirmPayment:disabled {
 	opacity: .4;
 	cursor: not-allowed;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SIGNAGE PAGE
+   ══════════════════════════════════════════════════════════════ */
+.signage-hero,
+.signage-about {
+	height: auto !important;
+	overflow: visible !important;
+	padding: 100px 0;
+}
+
+.signage-hero-img,
+.signage-explain-img {
+	width: 100% !important;
+	height: auto !important;
+	max-height: none !important;
+	object-fit: contain !important;
+	display: block;
+	border: 1px solid var(--accent-border);
+	box-shadow: var(--shadow-glow);
+	transition: transform 0.4s ease;
+	border-radius: var(--radius-md);
+}
+
+.signage-hero-img:hover,
+.signage-explain-img:hover {
+	transform: translateY(-10px);
+}
+
+.signage-hero {
+	background: radial-gradient(circle at 15% 50%, rgba(54, 236, 222, 0.06) 0%, transparent 70%), var(--dark-navy);
+}
+
+.signage-about {
+	background-color: var(--navy);
+}
+
+.signage-features {
+	background-color: var(--dark-navy);
+}
+
+.signage-badge {
+	color: var(--accent);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.75rem;
+	background: var(--accent-dim);
+	border: 1px solid var(--accent-border);
+	padding: 6px 15px;
+	border-radius: 50px;
+	display: inline-block;
+}
+
+.signage-cta {
+	padding: 120px 0;
+	background: var(--navy);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PAYROLL PAGE
+   ══════════════════════════════════════════════════════════════ */
+.payroll-hero {
+	background: var(--dark-navy) !important;
+	padding: 160px 0 100px !important;
+	position: relative;
+}
+
+.payroll-hero::before {
+	display: none !important;
+}
+
+.payroll-hero h1 {
+	font-size: clamp(3rem, 6vw, 4.5rem) !important;
+	margin-bottom: 25px;
+}
+
+.payroll-hero-img,
+.payroll-about-img,
+.payroll-how-img {
+	width: 100% !important;
+	height: auto !important;
+	border-radius: 4px !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+	object-fit: contain !important;
+}
+
+#about,
+#how {
+	background-color: var(--navy) !important;
+	padding: 120px 0 !important;
+}
+
+#features {
+	background-color: var(--dark-navy) !important;
+	padding: 120px 0 !important;
+}
+
+.payroll-feature-card {
+	background: transparent !important;
+	border: none !important;
+	border-left: 2px solid var(--accent) !important;
+	border-radius: 0 !important;
+	padding: 20px 25px !important;
+	transition: all 0.3s ease;
+}
+
+.payroll-feature-card:hover {
+	background: rgba(54, 236, 222, 0.03) !important;
+}
+
+.payroll-feature-icon {
+	display: none !important;
+}
+
+.payroll-badge {
+	color: var(--accent);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 0.8rem;
+	border-bottom: 1px solid var(--accent);
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+/* ── LIGHT MODE — sections & cards ──────────────────────────── */
+body.light-mode section,
+body.light-mode .about-us,
+body.light-mode .our-team,
+body.light-mode .featured-product-section,
+body.light-mode .contactUs,
+body.light-mode .pos-hero,
+body.light-mode .pos-about,
+body.light-mode .pos-features,
+body.light-mode .pos-pricing,
+body.light-mode .pos-screens,
+body.light-mode .signage-hero,
+body.light-mode .signage-features,
+body.light-mode .payroll-hero,
+body.light-mode #features {
+	background-color: #E6E9EC !important;
+}
+
+body.light-mode .navy-section,
+body.light-mode .signage-about,
+body.light-mode .signage-cta,
+body.light-mode .contactUs,
+body.light-mode .pos-cta,
+body.light-mode #about,
+body.light-mode #how,
+body.light-mode .footer {
+	background-color: #d0d4d8 !important;
+}
+
+
+/* Cacher les particules en light mode */
+body.light-mode #particles-about,
+body.light-mode .hero-particles,
+body.light-mode #particles-hero,
+body.light-mode #particles-region,
+body.light-mode .region-particles,
+body.light-mode .hero-grid-overlay {
+	display: none !important;
+}
+
+body.light-mode .partnerships,
+body.light-mode .clients {
+	background-color: #c4c8cc !important;
+}
+
+body.light-mode .about-card-main,
+body.light-mode .about-card-sub,
+body.light-mode .service-card,
+body.light-mode .highlight-card,
+body.light-mode .team-card,
+body.light-mode .contact-card-exact,
+body.light-mode .feature-card,
+body.light-mode .pricing-card {
+	background: rgba(255, 255, 255, 0.95) !important;
+	border-color: rgba(0, 122, 114, 0.20) !important;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode .section-heading {
+	color: #2F2F2F !important;
+}
+
+body.light-mode p,
+body.light-mode .hero-text-content p {
+	color: #4a5568 !important;
+}
+
+body.light-mode .footer p,
+body.light-mode .footer a {
+	color: #4a5568;
+}
+
+/* ── LOGO SWITCHER ───────────────────────────────────────────── */
+.logo-dark {
+	display: block;
+	height: 65px;
+	width: auto;
+}
+
+.logo-light {
+	display: none;
+	height: 65px;
+	width: auto;
+}
+
+body.light-mode .logo-dark {
+	display: none;
+}
+
+body.light-mode .logo-light {
+	display: block;
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────────── */
@@ -1051,114 +1361,15 @@ section {
 	}
 }
 
-
-
-/* signage */
-
-/* Styles spécifiques à la page Signage pour matcher ton thème technique */
-
-/* ── SIGNAGE SPECIFIC STYLES ── */
-
-/* 1. Typographie & Couleurs */
-.signage-hero h1,
-.signage-about h2,
-.signage-features h2,
-.signage-cta h2,
-.feature-card h5 {
-	font-family: 'Syne', sans-serif !important;
-	font-weight: 800;
-	color: var(--white);
-	letter-spacing: -0.5px;
-}
-
-.signage-hero p,
-.signage-about p,
-.feature-card p {
-	font-family: 'Inter', sans-serif !important;
-	color: var(--light-slate);
-	line-height: 1.7;
-}
-
-/* 2. Correction Radicale de l'image coupée */
-.signage-hero,
-.signage-about {
-	height: auto !important;
-	/* On laisse la section s'agrandir selon le contenu */
-	overflow: visible !important;
-	padding: 100px 0;
-}
-
-.signage-hero-img,
-.signage-explain-img {
-	width: 100% !important;
-	height: auto !important;
-	/* Force la hauteur naturelle */
-	max-height: none !important;
-	/* Supprime le 400px qui coupait l'image */
-	object-fit: contain !important;
-	/* Affiche l'image entière sans rognage */
-	display: block;
-	border: 1px solid var(--accent-border);
-	box-shadow: var(--shadow-glow);
-	transition: transform 0.4s ease;
-}
-
-.signage-hero-img:hover,
-.signage-explain-img:hover {
-	transform: translateY(-10px);
-}
-
-/* 3. Layout Sections */
-.signage-hero {
-	background: radial-gradient(circle at 15% 50%, rgba(100, 255, 218, 0.07) 0%, transparent 70%), var(--dark-navy);
-}
-
-.signage-about {
-	background-color: var(--navy);
-}
-
-.signage-features {
-	background-color: var(--dark-navy);
-}
-
-.signage-badge {
-	color: var(--accent);
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 0.75rem;
-	background: var(--accent-dim);
-	border: 1px solid var(--accent-border);
-	padding: 6px 15px;
-	border-radius: 50px;
-	display: inline-block;
-}
-
-.signage-cta {
-	padding: 120px 0;
-	background: var(--navy);
-}
-
-
-
-/* ── GRANDS ÉCRANS (1400px+) ─────────────────────────────────── */
 @media (min-width: 1400px) {
-
-	/* Limiter la largeur du contenu pour éviter que ça s'étire trop */
 	.container {
 		max-width: 1320px;
 	}
 
-	/* Hero — augmenter les tailles de texte */
 	.hero-text-content h1 {
 		font-size: 3.5rem;
 	}
 
-	.int-hero-title {
-		font-size: 6rem;
-	}
-
-	/* Hero visuel — plus de place pour l'image */
 	.hero-visual-area {
 		width: 60%;
 	}
@@ -1168,26 +1379,19 @@ section {
 		padding: 0 5%;
 	}
 
-	/* Cards — plus d'espace intérieur */
-	.int-service-card,
 	.feature-card,
 	.pricing-card {
 		padding: 44px 36px;
 	}
 
-	/* Sections — plus d'espace vertical */
 	section,
 	.pos-about,
-	.pos-features,
-	.int-services,
-	.int-region {
+	.pos-features {
 		padding: 120px 0;
 	}
 }
 
-/* ── TRÈS GRANDS ÉCRANS (1920px+) ───────────────────────────── */
 @media (min-width: 1920px) {
-
 	body {
 		font-size: 18px;
 	}
@@ -1198,10 +1402,6 @@ section {
 
 	.hero-text-content h1 {
 		font-size: 4.5rem;
-	}
-
-	.int-hero-title {
-		font-size: 7.5rem;
 	}
 
 	.team-card .card-img-top {

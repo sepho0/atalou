@@ -105,6 +105,13 @@
   "services_other_f3": "Investigación personalizada y I+D de soluciones tecnológicas",
   "services_other_f4": "Sistema de punto de venta ATA (ATA POS)",
 
+
+		"svc_desc_8": "Venta de equipos informáticos, geolocalización GPS y soluciones tecnológicas de I+D personalizadas.",
+ 
+"svc_name_9": "Nómina",
+"svc_desc_9": "Automatice la gestión de nóminas, vacaciones y declaraciones sociales .",
+ 
+
   "services_view_more": "Ver Más",
 
   "part_tag": "Socios",
@@ -285,6 +292,73 @@
   "sig_f2_text": "Capte un 400% más de atención que un cartel estático gracias a los contenidos animados.",
   "sig_f3_title": "Reducción de Costes",
   "sig_f3_text": "Elimine los gastos de impresión y los retrasos en la entrega de sus materiales publicitarios.",
-  "sig_cta_title": "¿Listo para dinamizar sus pantallas?"
+  "sig_cta_title": "¿Listo para dinamizar sus pantallas?",
+
+
+
+
+
+		"payroll_page_title":        "AtaPayroll – Gestión de nómina | Atalou Microsystem",
+
+"payroll_nav_home":          "Inicio",
+"payroll_nav_about":         "Acerca de",
+"payroll_nav_features":      "Funcionalidades",
+"payroll_nav_how":           "Cómo funciona",
+"payroll_nav_contact":       "Contacto",
+
+"payroll_badge":             "Gestión de nómina",
+"payroll_hero_title_1":      "AtaPayroll",
+"payroll_hero_title_2":      "por Atalou",
+"payroll_hero_text":         "Una solution completa para automatizar la gestión de nómina, y declaraciones sociales — diseñada para todas empresas de todo lado. ",
+"payroll_hero_btn_contact":  "Contáctenos",
+"payroll_hero_btn_features": "Ver funcionalidades",
+
+"payroll_stat1":             "Conforme",
+"payroll_stat2":             "Soporte activo",
+"payroll_stat3":             "Multi-moneda",
+
+"payroll_about_title":       "¿Qué es AtaPayroll?",
+"payroll_about_p1":          "Atalou Nómina es una solución de gestión de nómina diseñada para empresas que operan en Haití y el Caribe. Automatiza todo el ciclo de remuneración: cálculo de salarios, cotizaciones sociales, gestión de ausencias y generación de recibos de sueldo.",
+"payroll_about_p2":          "Con una interfaz intuitiva y cumplimiento de las normativas locales, permite a los equipos de RRHH ahorrar tiempo, reducir errores y garantizar la transparencia en el procesamiento de salarios.",
+"payroll_about_p3":          "Se adapta a organizaciones de todos los tamaños  PYMES, grandes empresas y ONG.",
+
+"payroll_features_title":    "¿Por qué elegir AtaPayroll?",
+
+"payroll_feature1_title":    "Cálculo automático de nómina",
+"payroll_feature1_text":     "Salarios base, horas extra, bonificaciones y deducciones calculados automáticamente en cada ciclo de nómina.",
+"payroll_feature2_title":    "Recibos de sueldo instantáneos",
+"payroll_feature2_text":     "Generación y distribución digital de recibos de sueldo con un clic, accesibles en cualquier momento por los empleados.",
+"payroll_feature3_title":    "Gestión de vacaciones y ausencias",
+"payroll_feature3_text":     "Seguimiento en tiempo real de vacaciones, bajas por enfermedad, maternidad y ausencias con impacto automático en la nómina.",
+"payroll_feature4_title":    "Cumplimiento normativo",
+"payroll_feature4_text":     "Cumplimiento de las obligaciones legales haitianas: cotizaciones ONA, OFATMA, impuesto sobre la renta y declaraciones sociales.",
+"payroll_feature5_title":    "Multi-moneda",
+"payroll_feature5_text":     "Gestión simultánea en todas las monedas según los contratos de sus empleados.",
+"payroll_feature6_title":    "Informes y análisis de RRHH",
+"payroll_feature6_text":     "Paneles de control e informes detallados sobre la masa salariale, costos por departamento y tendencias de RRHH.",
+"payroll_feature7_title":    "Gestión multi-empleados",
+"payroll_feature7_text":     "Gestione decenas o cientos de empleados con perfiles individualizados, categorías y estructuras salariales diferentes.",
+"payroll_feature8_title":    "Seguridad y confidencialidad",
+"payroll_feature8_text":     "Datos cifrados, acceso por roles y registros de auditoría para garantizar la confidencialidad de la información salarial.",
+"payroll_feature9_title":    "Integración sencilla",
+"payroll_feature9_text":     "Compatible con sus herramientas existentes: QuickBooks, ACCPAC, reloj biométrico y ATAPOS.",
+
+"payroll_how_title":         "¿Cómo funciona?",
+"payroll_how_sub":           "Un proceso simple y estructurado para garantizar una nómina precisa en cada ciclo.",
+
+"payroll_step1_title":       "Configuración de empleados",
+"payroll_step1_text":        "Cree los perfiles de sus empleados: contrato, salario base, beneficios, cotizaciones y departamento.",
+"payroll_step2_title":       "Recopilación de datos del mes",
+"payroll_step2_text":        "El sistema integra automáticamente las ausencias, horas extra y bonificaciones del período.",
+"payroll_step3_title":       "Cálculo y validación",
+"payroll_step3_text":        "La nómina se calcula automáticamente. El responsable de RRHH valida o ajusta antes de finalizar.",
+"payroll_step4_title":       "Distribución de recibos",
+"payroll_step4_text":        "Los recibos de sueldo se generan y envían digitalmente a cada empleado en segundos.",
+"payroll_step5_title":       "Informes y archivado",
+"payroll_step5_text":        "Todos los ciclos de nómina quedan archivados y accesibles para auditorías, declaraciones fiscales o análisis de RRHH.",
+
+"payroll_cta_title":         "¿Listo para simplificar su gestión de nómina?",
+"payroll_cta_sub":           "Contacte a nuestro equipo para una demostración personalizada y descubra cómo Atalou Nómina puede transformar su departamento de RRHH.",
+"payroll_cta_btn":           "Solicitar una demostración"
 
 }

@@ -23,7 +23,10 @@
 		<nav class="navbar navbar-expand-lg int-navbar">
 			<div class="container">
 				<a class="navbar-brand" href="#">
-					<img src="image/logo.png" alt="Atalou Microsystem" height="42">
+					<!-- Logo dark mode (visible par défaut) -->
+					<img src="image/LOGO2.png" alt="Atalou Microsystem" class="logo-dark">
+					<!-- Logo light mode (visible en light) -->
+					<img src="image/logo.png" alt="Atalou Microsystem" class="logo-light">
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#intNav">
 					<span class="navbar-toggler-icon" style="filter:invert(1);"></span>
@@ -33,32 +36,41 @@
 						<li class="nav-item"><a class="nav-link" id="nav-services" href="#services">Services</a></li>
 						<li class="nav-item"><a class="nav-link" id="nav-partners" href="#partners">Partenaires</a></li>
 						<li class="nav-item"><a class="nav-link" id="nav-region" href="#region">Votre région</a></li>
+						<!-- Dans la navbar, avant le bouton CTA -->
+						<li class="nav-item">
+							<button class="theme-toggle-btn" id="themeToggle" title="Changer le thème">
+								<span class="toggle-track">
+									<span class="toggle-thumb"></span>
+								</span>
+								<span class="toggle-icon" id="toggleIcon">🌙</span>
+							</button>
+						</li>
 						<li class="nav-item ms-2">
 							<a class="btn int-btn-outline rounded-pill px-4" id="nav-cta" href="#region">Accéder →</a>
 						</li>
-					<li class="nav-item dropdown ms-lg-3">
-						<a class="nav-link dropdown-toggle lang-dropdown-btn" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
-							<span id="current-lang-flag">🇫🇷</span> <span id="current-lang-text">FR</span>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-end lang-dropdown-menu">
-							<li>
-								<button class="dropdown-item" onclick="switchPageLang('fr')">
-									<span class="me-2">🇫🇷</span> Français (FR)
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" onclick="switchPageLang('en')">
-									<span class="me-2">🇺🇸</span> English (EN)
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" onclick="switchPageLang('es')">
-									<span class="me-2">🇪🇸</span> Español (ES)
-								</button>
-							</li>
-						</ul>
-					</li>
+						<li class="nav-item dropdown ms-lg-3">
+							<a class="nav-link dropdown-toggle lang-dropdown-btn" href="#" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								<span id="current-lang-flag">🇫🇷</span> <span id="current-lang-text">FR</span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end lang-dropdown-menu">
+								<li>
+									<button class="dropdown-item" onclick="switchPageLang('fr')">
+										<span class="me-2">🇫🇷</span> Français (FR)
+									</button>
+								</li>
+								<li>
+									<button class="dropdown-item" onclick="switchPageLang('en')">
+										<span class="me-2">🇺🇸</span> English (EN)
+									</button>
+								</li>
+								<li>
+									<button class="dropdown-item" onclick="switchPageLang('es')">
+										<span class="me-2">🇪🇸</span> Español (ES)
+									</button>
+								</li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -72,7 +84,7 @@
 		<div class="container position-relative" style="z-index:3;">
 			<div class="row align-items-center min-vh-100 py-5">
 				<div class="col-lg-6" data-aos="fade-right" data-aos-duration="900">
-<img src="image/pos.png" alt="Atalou Microsystem" class="hero-logo-img w-100">
+					<img src="image/pos.png" alt="Atalou Microsystem" class="hero-logo-img w-100">
 					<p id="hero-sub" class="int-hero-sub mt-4">
 						Depuis plus de 20 ans, Atalou Microsystem accompagne les entreprises dans leur transformation
 						digitale — partout dans le monde.
@@ -87,13 +99,9 @@
 					</div>
 				</div>
 
-				
-
 				<div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
 					<div class="hero-visual-card">
 						<div class="hero-visual-glow"></div>
-
-								
 
 						<div class="hero-stats-grid">
 							<div class="hero-stat" data-aos="zoom-in" data-aos-delay="500">
@@ -105,7 +113,7 @@
 								<span id="stat-label-support" class="stat-label">Support actif</span>
 							</div>
 						</div>
-						
+
 						<div class="float-tag tag-2"><i class="fas fa-wifi me-1"></i> Signage</div>
 						<div class="float-tag tag-3"><i class="fas fa-cash-register me-1"></i> ATAPOS</div>
 					</div>
@@ -122,83 +130,124 @@
 	<section id="services" class="int-services">
 		<div class="container">
 			<div class="text-center mb-5" data-aos="fade-down">
-				<span class="int-section-tag"><i class="bi bi-grid-3x3-gap me-2"></i><span id="svc-tag-text">Nos
-						solutions</span></span>
-				<h2 class="int-section-title mt-3" id="svc-title">Ce que nous proposons</h2>
-				<p class="int-section-sub" id="svc-sub">Une gamme complète de solutions IT pour accélérer votre
-					activité.</p>
+				<span class="int-section-tag"><i class="bi bi-grid-3x3-gap me-2"></i><span id="svc-tag-text"
+						data-i18n="svc_tag">Nos solutions</span></span>
+				<h2 class="int-section-title mt-3" id="svc-title" data-i18n="svc_title">Ce que nous proposons</h2>
+				<p class="int-section-sub" id="svc-sub" data-i18n="svc_sub">Une gamme complète de solutions IT pour
+					accélérer votre activité.</p>
 			</div>
 
 			<div class="swiper swiper-services" data-aos="fade-up" data-aos-delay="200">
 				<div class="swiper-wrapper pb-4">
+
+					<!-- Slide 1 : ATA POS -->
 					<div class="swiper-slide">
 						<div class="int-service-card">
 							<div class="svc-icon-wrap"><i class="fas fa-cash-register"></i></div>
-							<h4 id="svc-name-1">ATA POS</h4>
-							<p id="svc-desc-1">Gestion complète de vos ventes, inventaire, employés et crédit en temps
-								réel.</p>
-							<a href="pos.details.html" class="int-card-link"><span class="btn-more">En savoir
-									plus</span> <i class="bi bi-arrow-right"></i></a>
+							<h4 data-i18n="svc_name_1">ATA POS</h4>
+							<p data-i18n="svc_desc_1">Gestion complète de vos ventes, inventaire, employés et crédit en
+								temps réel.</p>
+							<a href="pos.details.html" class="int-card-link"><span class="btn-more"
+									data-i18n="svc_more">En savoir plus</span> <i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
+
+					<!-- Slide 2 : Signage Digital -->
 					<div class="swiper-slide">
 						<div class="int-service-card">
 							<div class="svc-icon-wrap"><i class="fas fa-tv"></i></div>
-							<h4 id="svc-name-2">Signage Digital</h4>
-							<p id="svc-desc-2">Diffusez vos contenus multimédias sur tous vos écrans depuis une seule
-								plateforme.</p>
-							<a href="signage.html" class="int-card-link"><span class="btn-more">En savoir
-									plus</span> <i class="bi bi-arrow-right"></i></a>
+							<h4 data-i18n="svc_name_2">Signage Digital</h4>
+							<p data-i18n="svc_desc_2">Diffusez vos contenus multimédias sur tous vos écrans depuis une
+								seule plateforme.</p>
+							<a href="signage.html" class="int-card-link"><span class="btn-more" data-i18n="svc_more">En
+									savoir plus</span> <i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
+
+					<!-- Slide 3 : Support & Maintenance -->
 					<div class="swiper-slide">
 						<div class="int-service-card">
 							<div class="svc-icon-wrap"><i class="fas fa-cogs"></i></div>
-							<h4 id="svc-name-3">Support & Maintenance</h4>
-							<p id="svc-desc-3">Surveillance et optimisation des réseaux, alarmes incendie,
+							<h4 data-i18n="svc_name_3">Support & Maintenance</h4>
+							<p data-i18n="svc_desc_3">Surveillance et optimisation des réseaux, alarmes incendie,
 								vidéosurveillance.</p>
-							<a href="services/supportINF.html" class="int-card-link"><span class="btn-more">En savoir
-									plus</span> <i class="bi bi-arrow-right"></i></a>
+							<a href="services/supportINF.html" class="int-card-link"><span class="btn-more"
+									data-i18n="services_view_more">En savoir plus</span> <i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
+
+					<!-- Slide 4 : Solutions Réseau -->
 					<div class="swiper-slide">
 						<div class="int-service-card">
 							<div class="svc-icon-wrap"><i class="fas fa-wifi"></i></div>
-							<h4 id="svc-name-4">Solutions Réseau</h4>
-							<p id="svc-desc-4">Téléphonie IP, câblage structuré, connexions Point-à-Point et multipoint.
-							</p>
-							<a href="services/réseau.html" class="int-card-link"><span class="btn-more">En savoir
-									plus</span> <i class="bi bi-arrow-right"></i></a>
+							<h4 data-i18n="svc_name_4">Solutions Réseau</h4>
+							<p data-i18n="svc_desc_4">Téléphonie IP, câblage structuré, connexions Point-à-Point et
+								multipoint.</p>
+							<a href="services/réseau.html" class="int-card-link"><span class="btn-more"
+									data-i18n="services_view_more">En savoir plus</span> <i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
+
+					<!-- Slide 5 : Services Web -->
 					<div class="swiper-slide">
 						<div class="int-service-card">
 							<div class="svc-icon-wrap"><i class="fas fa-code"></i></div>
-							<h4 id="svc-name-5">Services Web</h4>
-							<p id="svc-desc-5">Développement sur mesure de sites et d'applications mobiles. Domaines &
-								hébergement.</p>
-							<a href="services/web.html" class="int-card-link"><span class="btn-more">En savoir
-									plus</span> <i class="bi bi-arrow-right"></i></a>
+							<h4 data-i18n="svc_name_5">Services Web</h4>
+							<p data-i18n="svc_desc_5">Développement sur mesure de sites et d'applications mobiles.
+								Domaines & hébergement.</p>
+							<a href="services/web.html" class="int-card-link"><span class="btn-more"
+									data-i18n="services_view_more">En savoir plus</span> <i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
+
+					<!-- Slide 6 : Défense & Surveillance -->
 					<div class="swiper-slide">
 						<div class="int-service-card">
 							<div class="svc-icon-wrap"><i class="fas fa-lock"></i></div>
-							<h4 id="svc-name-6">Défense & Surveillance</h4>
-							<p id="svc-desc-6">Caméras, périmétrique, gestion biométrique de présence et accès.</p>
-							<a href="services/défense.html" class="int-card-link"><span class="btn-more">En savoir
-									plus</span> <i class="bi bi-arrow-right"></i></a>
+							<h4 data-i18n="svc_name_6">Défense & Surveillance</h4>
+							<p data-i18n="svc_desc_6">Caméras, périmétrique, gestion biométrique de présence et accès.
+							</p>
+							<a href="services/défense.html" class="int-card-link"><span class="btn-more"
+									data-i18n="services_view_more">En savoir plus</span> <i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
+
+					<!-- Slide 7 : Support Logiciel -->
 					<div class="swiper-slide">
 						<div class="int-service-card">
 							<div class="svc-icon-wrap"><i class="fas fa-laptop"></i></div>
-							<h4 id="svc-name-7">Support Logiciel</h4>
-							<p id="svc-desc-7">QuickBooks, ACCPAC, CRE, OB POS, protection antivirus et pare-feu.</p>
-							<a href="services/logiciel.html" class="int-card-link"><span class="btn-more">En savoir
-									plus</span> <i class="bi bi-arrow-right"></i></a>
+							<h4 data-i18n="svc_name_7">Support Logiciel</h4>
+							<p data-i18n="svc_desc_7">QuickBooks, ACCPAC, CRE, OB POS, protection antivirus et pare-feu.
+							</p>
+							<a href="services/logiciel.html" class="int-card-link"><span class="btn-more"
+									data-i18n="services_view_more">En savoir plus</span> <i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
+
+					<!-- Slide 8 : Autres Services -->
+					<div class="swiper-slide">
+						<div class="int-service-card">
+							<div class="svc-icon-wrap"><i class="fas fa-boxes"></i></div>
+							<h4  data-i18n="autres.page.title">Autres Services</h4>
+							<p data-i18n="svc_desc_8">Vente d'équipements informatiques, géolocalisation GPS et R&D de
+								solutions technologiques sur mesure.</p>
+							<a href="services/autres.html" class="int-card-link"><span class="btn-more"
+									data-i18n="services_view_more">En savoir plus</span> <i class="bi bi-arrow-right"></i></a>
+						</div>
+					</div>
+
+					<!-- Slide 9 : Payroll -->
+					<div class="swiper-slide">
+						<div class="int-service-card">
+							<div class="svc-icon-wrap"><i class="fas fa-money-check-alt"></i></div>
+							<h4 data-i18n="svc_name_9">Payroll</h4>
+							<p data-i18n="svc_desc_9">Automatisez la gestion de votre paie, des congés et des
+								déclarations sociales en toute conformité.</p>
+							<a href="payroll.html" class="int-card-link"><span class="btn-more"
+									data-i18n="services_view_more">En savoir plus</span> <i class="bi bi-arrow-right"></i></a>
+						</div>
+					</div>
+
 				</div>
 				<div class="swiper-pagination int-swiper-pagination"></div>
 				<div class="swiper-button-prev int-swiper-btn int-btn-prev"></div>
@@ -210,11 +259,12 @@
 	<section id="partners" class="int-partners">
 		<div class="container">
 			<div class="text-center mb-5" data-aos="fade-down">
-				<span class="int-section-tag"><i class="bi bi-people me-2"></i><span
-						id="part-tag-text">Partenaires</span></span>
-				<h2 class="int-section-title mt-3" id="part-title">Nos partenaires de confiance</h2>
-				<p class="int-section-sub" id="part-sub">Un réseau de marques de premier plan pour vous offrir le
-					meilleur.</p>
+				<span class="int-section-tag"><i class="bi bi-people me-2"></i><span id="part-tag-text"
+						data-i18n="part_tag">Partenaires</span></span>
+				<h2 class="int-section-title mt-3" id="part-title" data-i18n="part_title">Nos partenaires de confiance
+				</h2>
+				<p class="int-section-sub" id="part-sub" data-i18n="part_sub">Un réseau de marques de premier plan pour
+					vous offrir le meilleur.</p>
 			</div>
 
 			<div class="int-marquee-wrap mb-5" data-aos="fade-up">
@@ -243,7 +293,8 @@
 			</div>
 
 			<div class="mt-5 pt-5" data-aos="fade-up" data-aos-delay="200">
-				<p class="int-marquee-label text-center" id="part-clients">Ils nous font confiance</p>
+				<p class="int-marquee-label text-center" id="part-clients" data-i18n="part_clients">Ils nous font
+					confiance</p>
 				<div class="int-marquee-wrap">
 					<div class="int-marquee-track">
 						<img src="partnerships/clients/UNICEF.png" alt="UNICEF">
@@ -266,11 +317,12 @@
 		<div id="particles-region" class="region-particles"></div>
 		<div class="container position-relative" style="z-index:2;">
 			<div class="text-center mb-5" data-aos="fade-down">
-				<span class="int-section-tag"><i class="bi bi-geo-alt me-2"></i><span id="region-tag-text">Votre
-						région</span></span>
-				<h2 class="int-section-title mt-3" id="region-title">Sélectionnez votre pays</h2>
-				<p class="int-section-sub" id="region-sub">Accédez au site et aux offres adaptées à votre marché local.
-				</p>
+				<span class="int-section-tag"><i class="bi bi-geo-alt me-2"></i><span id="region-tag-text"
+						data-i18n="region_tag">Votre région</span></span>
+				<h2 class="int-section-title mt-3" id="region-title" data-i18n="region_title">Sélectionnez votre pays
+				</h2>
+				<p class="int-section-sub" id="region-sub" data-i18n="region_sub">Accédez au site et aux offres adaptées
+					à votre marché local.</p>
 			</div>
 
 			<div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
@@ -278,43 +330,45 @@
 					<div class="int-region-box">
 						<div class="region-box-inner">
 							<div class="region-icon-wrap mb-4 text-center"><i class="fas fa-globe-americas"></i></div>
-							<p class="region-desc text-center" id="region-desc-text">
+							<p class="region-desc text-center" id="region-desc-text" data-i18n="region_desc">
 								Chaque marché a ses spécificités. Sélectionnez votre pays pour accéder au portail dédié
 								avec les offres, les contacts et le support de votre région.
 							</p>
 							<div class="country-select-wrap mt-4">
 								<div class="custom-select-box" id="customSelect">
 									<div class="select-trigger" id="selectTrigger">
-										<span class="select-placeholder" id="selectPlaceholder">— Choisir votre pays
-											—</span>
+										<span class="select-placeholder" id="selectPlaceholder"
+											data-i18n="region_placeholder">— Choisir votre pays —</span>
 										<i class="bi bi-chevron-down select-chevron"></i>
 									</div>
-								<ul class="select-dropdown" id="selectDropdown">
-									<li class="select-option" data-country="ht" data-name="Haïti">
-										<span class="opt-flag">🇭🇹</span>
-										<span class="opt-name" data-i18n="country_haiti">Haïti</span>
-									</li>
-									<li class="select-option" data-country="us" data-name="United States">
-										<span class="opt-flag">🇺🇸</span>
-										<span class="opt-name" data-i18n="country_usa">United States</span>
-									</li>
-									<li class="select-option" data-country="do" data-name="República Dominicana">
-										<span class="opt-flag">🇩🇴</span>
-										<span class="opt-name" data-i18n="country_dom">República Dominicana</span>
-									</li>
-									<li class="select-option" data-country="jm" data-name="Jamaica">
-										<span class="opt-flag">🇯🇲</span>
-										<span class="opt-name" data-i18n="country_jm">Jamaica</span>
-									</li>
-									<li class="select-option select-option--global" data-country="carib" data-name="Caribbean (All)">
-										<span class="opt-flag">🌎</span>
-										<span class="opt-name" data-i18n="country_carib">All Caribbean</span>
-									</li>
-								</ul>
+									<ul class="select-dropdown" id="selectDropdown">
+										<li class="select-option" data-country="ht" data-name="Haïti">
+											<span class="opt-flag">🇭🇹</span>
+											<span class="opt-name" data-i18n="country_haiti">Haïti</span>
+										</li>
+										<li class="select-option" data-country="us" data-name="United States">
+											<span class="opt-flag">🇺🇸</span>
+											<span class="opt-name" data-i18n="country_usa">United States</span>
+										</li>
+										<li class="select-option" data-country="do" data-name="República Dominicana">
+											<span class="opt-flag">🇩🇴</span>
+											<span class="opt-name" data-i18n="country_dom">República Dominicana</span>
+										</li>
+										<li class="select-option" data-country="jm" data-name="Jamaica">
+											<span class="opt-flag">🇯🇲</span>
+											<span class="opt-name" data-i18n="country_jm">Jamaica</span>
+										</li>
+										<li class="select-option select-option--global" data-country="carib"
+											data-name="Caribbean (All)">
+											<span class="opt-flag">🌎</span>
+											<span class="opt-name" data-i18n="country_carib">All Caribbean</span>
+										</li>
+									</ul>
 								</div>
 							</div>
 							<button class="region-go-btn mt-4 w-100" id="regionGoBtn" disabled>
-								<span id="regionGoBtnText">Accéder</span> <i class="bi bi-arrow-right ms-2"></i>
+								<span id="regionGoBtnText" data-i18n="region_go">Accéder</span> <i
+									class="bi bi-arrow-right ms-2"></i>
 							</button>
 						</div>
 					</div>
@@ -327,13 +381,12 @@
 		<div class="container">
 			<div class="row align-items-center g-4">
 				<div class="col-md-4">
-					<!-- <img src="image/logo.png" alt="Atalou Microsystem" height="38"> -->
 					<p class="mt-3 int-footer-tagline">We Build. We Manage. We Support.</p>
 				</div>
 				<div class="col-md-4 text-center">
 					<p class="mb-0 int-footer-copy">
-						© <span id="footerYear"></span> Atalou Microsystem.<br><span id="footer-rights">Tous droits
-							réservés.</span>
+						© <span id="footerYear"></span> Atalou Microsystem.<br><span id="footer-rights"
+							data-i18n="footer_rights">Tous droits réservés.</span>
 					</p>
 				</div>
 				<div class="col-md-4 text-md-end">
@@ -481,21 +534,34 @@
 		});
 
 		/* === GO BUTTON === */
-	goBtn.addEventListener('click', () => {
+		goBtn.addEventListener('click', () => {
 			if (!selectedData) return;
-
 			goBtn.disabled = true;
-
 			const langMap = { 'ht': 'fr', 'us': 'en', 'do': 'es', 'jm': 'en', 'carib': 'en' };
-		const lang = langMap[selectedData.country] || 'en';
-		localStorage.setItem('atalou_pref_lang', lang);
-		localStorage.setItem('atalou_country', JSON.stringify(selectedData));
-
-			// 3. Rediriger vers l'index
+			const lang = langMap[selectedData.country] || 'en';
+			localStorage.setItem('atalou_pref_lang', lang);
+			localStorage.setItem('atalou_country', JSON.stringify(selectedData));
 			setTimeout(() => {
 				window.location.href = 'Page2.html';
 			}, 700);
 		});
+
+
+			(function () {
+					const btn = document.getElementById('themeToggle');
+					const icon = document.getElementById('toggleIcon');
+					if (localStorage.getItem('atalou_theme') === 'light') {
+						document.body.classList.add('light-mode');
+						if (icon) icon.textContent = '☀️';
+					}
+					if (btn) btn.addEventListener('click', () => {
+						const isLight = document.body.classList.toggle('light-mode');
+						icon.textContent = isLight ? '☀️' : '🌙';
+						localStorage.setItem('atalou_theme', isLight ? 'light' : 'dark');
+					});
+				})();
+
+			
 	</script>
 
 </body>

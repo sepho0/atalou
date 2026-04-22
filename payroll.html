@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title data-i18n="payroll_page_title">Payroll – Gestion de la paie | Atalou Microsystem</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	
+</head>
+
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<a class="navbar-brand" href="Page2.html">
+					<img src="image/logo.png" alt="Logo Atalou Microsystem">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="Page2.html"
+								data-i18n="payroll_nav_home">Accueil</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about" data-i18n="payroll_nav_about">À
+								propos</a></li>
+						<li class="nav-item"><a class="nav-link" href="#features"
+								data-i18n="payroll_nav_features">Fonctionnalités</a></li>
+						<!-- <li class="nav-item"><a class="nav-link" href="#how"
+								data-i18n="payroll_nav_how">Fonctionnement</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact"
+								data-i18n="payroll_nav_contact">Contact</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- ═══════════════ HERO ═══════════════ -->
+	<section class="payroll-hero">
+		<div class="container">
+			<div class="row align-items-center g-5">
+				<div class="col-lg-6">
+					<span class="payroll-badge" data-i18n="payroll_badge">Gestion de la paie</span>
+					<h1 class="mt-3">
+						<span data-i18n="payroll_hero_title_1">Atapayroll</span><br>
+						
+					</h1>
+					<p class="mt-4" style="color: var(--light-slate);" data-i18n="payroll_hero_text">
+						Une solution complète pour automatiser la gestion de votre paie, des congés et des déclarations
+						sociales adaptée aux entreprises .
+					</p>
+					<div class="d-flex gap-3 flex-wrap mt-4">
+						<a href="#contact" class="btn btn-view-more px-4 py-2" data-i18n="payroll_hero_btn_contact">Nous
+							contacter</a>
+						<a href="#features" class="btn btn-view-more px-4 py-2"
+							data-i18n="payroll_hero_btn_features">Voir les fonctionnalités</a>
+					</div>
+
+					<!-- <div class="payroll-stats">
+						<div>
+							<span class="payroll-stat-num">100%</span>
+							<span class="payroll-stat-label" data-i18n="payroll_stat1">Conforme</span>
+						</div>
+						<div>
+							<span class="payroll-stat-num">24/7</span>
+							<span class="payroll-stat-label" data-i18n="payroll_stat2">Support actif</span>
+						</div>
+						<div>
+					
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="payroll-hero-img-wrap">
+						<img src="image/payroll.jpg" alt="Payroll Atalou" class="payroll-hero-img">
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</section>
+
+	<!-- ═══════════════ ABOUT ═══════════════ -->
+	<section id="about" class="payroll-about">
+		<div class="container">
+			<div class="row align-items-center g-5">
+				<div class="col-lg-6 text-center mb-4 mb-lg-0">
+					<img src="image/payroll.jpg" class="payroll-about-img" alt="Équipe RH">
+				</div>
+				<div class="col-lg-6">
+					<h2 data-i18n="payroll_about_title">Qu'est-ce que Payroll Atalou ?</h2>
+					<p class="mt-3" data-i18n="payroll_about_p1">
+						Payroll Atalou est une solution de gestion de la paie conçue pour les entreprises opérant en
+						Haïti et dans les Caraïbes. Elle automatise l'ensemble du cycle de rémunération : calcul des
+						salaires, cotisations sociales, gestion des absences et génération des bulletins de paie.
+					</p>
+					<p data-i18n="payroll_about_p2">
+						Grâce à une interface intuitive et une conformité aux réglementations locales, elle permet aux
+						équipes RH de gagner du temps, de réduire les erreurs et d'assurer la transparence des
+						traitements salariaux.
+					</p>
+					<p data-i18n="payroll_about_p3">
+						Compatible avec les devises locales  et internationales , elle s'adapte aux structures
+						de toutes tailles — PME, grandes entreprises, ONG.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ═══════════════ FEATURES ═══════════════ -->
+	<section id="features" class="payroll-features">
+		<div class="container">
+			<h2 class="section-heading text-center" data-i18n="payroll_features_title">Pourquoi choisir Payroll Atalou ?
+			</h2>
+
+			<div class="row mt-5 g-4">
+
+				<div class="col-md-4">
+					<div class="payroll-feature-card">
+						<div class="payroll-feature-icon"><i class="fas fa-calculator"></i></div>
+						<h5 data-i18n="payroll_feature1_title">Calcul automatique de la paie</h5>
+						<p data-i18n="payroll_feature1_text">Salaires de base, heures supplémentaires, primes et
+							retenues calculés automatiquement à chaque cycle de paie.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="payroll-feature-card">
+						<div class="payroll-feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+						<h5 data-i18n="payroll_feature2_title">Bulletins de paie instantanés</h5>
+						<p data-i18n="payroll_feature2_text">Génération et distribution numérique des bulletins de paie
+							en un clic, accessibles à tout moment par les employés.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="payroll-feature-card">
+						<div class="payroll-feature-icon"><i class="fas fa-calendar-check"></i></div>
+						<h5 data-i18n="payroll_feature3_title">Gestion des congés & absences</h5>
+						<p data-i18n="payroll_feature3_text">Suivi en temps réel des congés annuels, maladie, maternité
+							et absences avec impact automatique sur la paie.</p>
+					</div>
+				</div>
+
+				<!-- <div class="col-md-4">
+					<div class="payroll-feature-card">
+						<div class="payroll-feature-icon"><i class="fas fa-balance-scale"></i></div>
+						<h5 data-i18n="payroll_feature4_title">Conformité réglementaire</h5>
+						<p data-i18n="payroll_feature4_text">Respect des obligations légales haïtiennes : cotisations
+							ONA, OFATMA, impôt sur le revenu et déclarations sociales.</p>
+					</div>
+				</div> -->
+
+				<div class="col-md-4">
+					<div class="payroll-feature-card">
+						<div class="payroll-feature-icon"><i class="fas fa-coins"></i></div>
+						<h5 data-i18n="payroll_feature5_title">Multi-devises</h5>
+						<p data-i18n="payroll_feature5_text">Gestion simultanée en Gourdes haïtiennes (HTG) et en
+							Dollars américains (USD) selon les contrats de vos employés.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="payroll-feature-card">
+						<div class="payroll-feature-icon"><i class="fas fa-chart-pie"></i></div>
+						<h5 data-i18n="payroll_feature6_title">Rapports & analyses RH</h5>
+						<p data-i18n="payroll_feature6_text">Tableaux de bord et rapports détaillés sur la masse
+							salariale, les coûts par département et les tendances RH.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="payroll-feature-card">
+						<div class="payroll-feature-icon"><i class="fas fa-users-cog"></i></div>
+						<h5 data-i18n="payroll_feature7_title">Gestion multi-employés</h5>
+						<p data-i18n="payroll_feature7_text">Gérez des dizaines ou des centaines d'employés avec des
+							profils individualisés, des grades et des structures de paie différentes.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="payroll-feature-card">
+						<div class="payroll-feature-icon"><i class="fas fa-lock"></i></div>
+						<h5 data-i18n="payroll_feature8_title">Sécurité & confidentialité</h5>
+						<p data-i18n="payroll_feature8_text">Données chiffrées, accès par rôles et journaux d'audit pour
+							garantir la confidentialité des informations salariales.</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="payroll-feature-card">
+						<div class="payroll-feature-icon"><i class="fas fa-sync-alt"></i></div>
+						<h5 data-i18n="payroll_feature9_title">Intégration facile</h5>
+						<p data-i18n="payroll_feature9_text">Compatible avec vos outils existants : QuickBooks, ACCPAC,
+							pointeuse biométrique et ATAPOS.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+	<!-- <section id="how" class="payroll-how">
+		<div class="container">
+			<div class="row g-5 align-items-center">
+				<div class="col-lg-6">
+					<h2 class="section-heading" data-i18n="payroll_how_title">Comment ça fonctionne ?</h2>
+					<p class="mt-3" style="color: var(--light-slate);" data-i18n="payroll_how_sub">
+						Un processus simple et structuré pour garantir une paie précise à chaque cycle.
+					</p>
+
+					<div class="payroll-steps">
+
+						<div class="payroll-step">
+							<div class="payroll-step-dot">1</div>
+							<h5 data-i18n="payroll_step1_title">Configuration des employés</h5>
+							<p data-i18n="payroll_step1_text">Créez les profils de vos employés : contrat, salaire de
+								base, avantages, cotisations et département.</p>
+						</div>
+
+						<div class="payroll-step">
+							<div class="payroll-step-dot">2</div>
+							<h5 data-i18n="payroll_step2_title">Collecte des données du mois</h5>
+							<p data-i18n="payroll_step2_text">Le système intègre automatiquement les absences, heures
+								supplémentaires et primes de la période.</p>
+						</div>
+
+						<div class="payroll-step">
+							<div class="payroll-step-dot">3</div>
+							<h5 data-i18n="payroll_step3_title">Calcul & validation</h5>
+							<p data-i18n="payroll_step3_text">La paie est calculée automatiquement. Le responsable RH
+								valide ou ajuste avant finalisation.</p>
+						</div>
+
+						<div class="payroll-step">
+							<div class="payroll-step-dot">4</div>
+							<h5 data-i18n="payroll_step4_title">Distribution des bulletins</h5>
+							<p data-i18n="payroll_step4_text">Les bulletins de paie sont générés et envoyés
+								numériquement à chaque employé en quelques secondes.</p>
+						</div>
+
+						<div class="payroll-step">
+							<div class="payroll-step-dot">5</div>
+							<h5 data-i18n="payroll_step5_title">Rapports & archivage</h5>
+							<p data-i18n="payroll_step5_text">Tous les cycles de paie sont archivés et accessibles pour
+								audit, déclarations fiscales ou analyses RH.</p>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-lg-6 text-center">
+					<img src="image/payroll_how.jpg" alt="Processus Payroll" class="payroll-how-img">
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+	<!-- ═══════════════ CTA ═══════════════ -->
+	<!-- <section id="contact" class="payroll-cta">
+		<div class="container">
+			<h2 data-i18n="payroll_cta_title">Prêt à simplifier votre gestion de la paie ?</h2>
+			<p data-i18n="payroll_cta_sub">
+				Contactez notre équipe pour une démonstration personnalisée et découvrez comment Payroll Atalou peut
+				transformer votre département RH.
+			</p>
+			<!-- <a href="demo.html" class="btn btn-view-more px-5 py-3" data-i18n="payroll_cta_btn">Demander une
+				démonstration</a>
+		</div> -->
+	<!-- </section> --> -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="translates/international.js"></script>
+
+	<script>if (localStorage.getItem('atalou_theme') === 'light') document.body.classList.add('light-mode');</script>
+</body>
+
+</html>
