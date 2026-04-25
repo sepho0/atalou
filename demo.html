@@ -21,6 +21,17 @@
 			--lightest-slate: #e6f1ff;
 		}
 
+
+			body.light-mode {
+			--bg-color: #F8F5F0;
+			--card-bg: #EDE8E1;
+			--accent-color: #1A56DB;
+			--text-main: #3D3530;
+			--text-title: #1E1A16;
+			--shadow-color: rgba(0, 0, 0, 0.1);
+			--icon-bg: rgba(26, 86, 219, 0.15);
+			}
+
 		html,
 		body {
 			height: 100%;
@@ -292,9 +303,8 @@
 		emailjs.init("ooXSPg6L406knWIN7");
 
 		const SERVICE_ID = 'service_1pg74dh';
-		const TEMPLATE_ID = 'template_waqhd5l'; // Votre template Auto-Reply existant
+		const TEMPLATE_ID = 'template_waqhd5l'; 
 
-		/* ---- Liens vidéo par produit ---- */
 		const demoLinks = {
 			'ATA POS': 'https://vimeo.com/1114339259',
 			'Payroll': 'https://vimeo.com/1186542484?fl=ip&fe=ec', 
@@ -317,7 +327,7 @@
 			document.getElementById('product-badge-text').textContent = labels[btn.dataset.product] || btn.dataset.product;
 		}
 
-		/* ---- Mise à jour badge quand langue change ---- */
+
 		const _origSwitch = window.switchPageLang;
 		window.switchPageLang = async function (lang) {
 			if (_origSwitch) await _origSwitch(lang);
@@ -406,6 +416,11 @@
 					status.textContent = msg.error;
 				});
 		});
+
+			if (localStorage.getItem('atalou_theme') === 'light') {
+					document.body.classList.add('light-mode');
+				}
+		
 	</script>
 
 </body>
