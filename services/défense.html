@@ -11,19 +11,37 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<style>
+		/* 1. VARIABLES PAR DÉFAUT (SOMBRE) */
 		:root {
-			--dark-blue: #0a192f;
-			--medium-blue: #112240;
+			--bg-color: #0a192f;
+			--card-bg: #112240;
 			--accent-color: #64ffda;
-			--light-slate: #ccd6f6;
-			--lightest-slate: #e6f1ff;
+			--text-main: #ccd6f6;
+			--text-title: #e6f1ff;
 			--shadow-color: rgba(2, 12, 27, 0.7);
+			--icon-bg: rgba(100, 255, 218, 0.15);
+		}
+
+		/* 2. VARIABLES MODE CLAIR */
+		body.light-mode {
+			--bg-color: #F8F5F0;
+			--card-bg: #EDE8E1;
+			--accent-color: #1A56DB;
+			--text-main: #3D3530;
+			--text-title: #1E1A16;
+			--shadow-color: rgba(0, 0, 0, 0.1);
+			--icon-bg: rgba(26, 86, 219, 0.15);
+
+			/* Application forcée au body */
+			background-color: var(--bg-color) !important;
+			color: var(--text-main) !important;
 		}
 
 		body {
-			background-color: var(--dark-blue);
-			color: var(--light-slate);
+			background-color: var(--bg-color);
+			color: var(--text-main);
 			font-family: 'Segoe UI', sans-serif;
+			transition: background-color 0.3s ease, color 0.3s ease;
 		}
 
 		.page-header {
@@ -32,7 +50,7 @@
 		}
 
 		.page-header h1 {
-			color: var(--lightest-slate);
+			color: var(--text-title);
 			font-weight: 700;
 		}
 
@@ -40,16 +58,16 @@
 			max-width: 700px;
 			margin: 20px auto 0;
 			font-size: 1.1rem;
+			color: var(--text-main);
 		}
 
 		.service-card {
-			background: var(--medium-blue);
+			background: var(--card-bg);
 			border: none;
 			border-radius: 20px;
 			box-shadow: 0 20px 40px var(--shadow-color);
-			transition: transform 0.4s ease, box-shadow 0.4s ease;
+			transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
 			height: 100%;
-			color: #ffffff;
 		}
 
 		.service-card:hover {
@@ -60,7 +78,7 @@
 		.service-icon {
 			width: 70px;
 			height: 70px;
-			background: rgba(100, 255, 218, 0.15);
+			background: var(--icon-bg);
 			color: var(--accent-color);
 			display: flex;
 			align-items: center;
@@ -68,18 +86,23 @@
 			border-radius: 50%;
 			font-size: 30px;
 			margin: 0 auto 20px;
+			transition: all 0.3s ease;
 		}
 
-		.service-card h4,
-		.service-card h5,
+		.service-card h5 {
+			color: var(--text-title);
+			font-weight: 600;
+		}
+
 		.service-card p {
-			color: #ffffff;
+			color: var(--text-main);
 		}
 
 		.back-btn {
 			color: var(--accent-color);
 			text-decoration: none;
 			font-weight: 500;
+			transition: color 0.3s ease;
 		}
 
 		.back-btn i {
@@ -90,7 +113,6 @@
 
 <body>
 
-	<!-- HEADER -->
 	<section class="page-header">
 		<div class="container">
 			<h1 data-aos="fade-down" data-i18n="defense_page_title">Défense & Surveillance</h1>
@@ -101,12 +123,10 @@
 		</div>
 	</section>
 
-	<!-- SERVICES -->
 	<section class="pb-5">
 		<div class="container">
 			<div class="row g-4">
 
-				<!-- Caméras de sécurité -->
 				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
 					<div class="card service-card h-100 p-4">
 						<div class="card-body d-flex flex-column">
@@ -124,7 +144,6 @@
 					</div>
 				</div>
 
-				<!-- Sécurité périmétrique -->
 				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
 					<div class="card service-card h-100 p-4">
 						<div class="card-body d-flex flex-column">
@@ -143,7 +162,6 @@
 					</div>
 				</div>
 
-				<!-- Gestion de présence & biométrie -->
 				<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
 					<div class="card service-card h-100 p-4">
 						<div class="card-body d-flex flex-column">
@@ -176,12 +194,16 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="../translates/international.js"></script>
+
 	<script>
 		AOS.init({ duration: 900, once: true });
+
+		// Appliquer le mode clair si stocké dans le localStorage
+		if (localStorage.getItem('atalou_theme') === 'light') {
+			document.body.classList.add('light-mode');
+		}
 	</script>
 
-
-<script>if (localStorage.getItem('atalou_theme') === 'light') document.body.classList.add('light-mode');</script>
 </body>
 
 </html>

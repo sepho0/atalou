@@ -10,6 +10,7 @@
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
 		rel="stylesheet">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 	<style>
 		:root {
@@ -49,6 +50,65 @@
 				inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 		}
 
+		.product-selector {
+			display: flex;
+			gap: 10px;
+			margin-bottom: 2rem;
+			background: rgba(255, 255, 255, 0.04);
+			border-radius: 12px;
+			padding: 6px;
+		}
+
+		.product-btn {
+			flex: 1;
+			background: transparent;
+			border: none;
+			color: var(--light-slate);
+			padding: 10px 8px;
+			border-radius: 8px;
+			font-size: 0.82rem;
+			font-weight: 600;
+			cursor: pointer;
+			transition: all 0.25s ease;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 4px;
+		}
+
+		.product-btn i {
+			font-size: 1.1rem;
+		}
+
+		.product-btn:hover {
+			color: var(--lightest-slate);
+			background: rgba(100, 255, 218, 0.06);
+		}
+
+		.product-btn.active {
+			background: var(--accent-color);
+			color: var(--dark-blue);
+			box-shadow: 0 4px 14px rgba(100, 255, 218, 0.25);
+		}
+
+		.product-badge {
+			text-align: center;
+			margin-bottom: 1.5rem;
+		}
+
+		.product-badge span {
+			display: inline-block;
+			background: rgba(100, 255, 218, 0.12);
+			color: var(--accent-color);
+			font-size: 0.8rem;
+			font-weight: 700;
+			letter-spacing: 1px;
+			padding: 4px 14px;
+			border-radius: 20px;
+			border: 1px solid rgba(100, 255, 218, 0.25);
+			text-transform: uppercase;
+		}
+
 		.demo-card h1 {
 			font-family: 'Playfair Display', serif;
 			font-size: 2rem;
@@ -61,7 +121,7 @@
 			text-align: center;
 			color: var(--light-slate);
 			font-size: 0.95rem;
-			margin-bottom: 2.5rem;
+			margin-bottom: 2rem;
 		}
 
 		.form-label {
@@ -138,6 +198,11 @@
 			.demo-card {
 				padding: 2rem 1.75rem;
 			}
+
+			.product-btn {
+				font-size: 0.75rem;
+				padding: 8px 4px;
+			}
 		}
 	</style>
 </head>
@@ -152,36 +217,51 @@
 				Découvrez comment Atalou Microsystem peut optimiser vos opérations.
 			</p>
 
-			<form id="demo-form">
+			<!-- Product Selector -->
+			<div class="product-selector">
+				<button class="product-btn active" data-product="ATA POS" onclick="selectProduct(this)">
+					<i class="fas fa-cash-register"></i>
+					<span>ATA POS</span>
+				</button>
+				<button class="product-btn" data-product="Payroll" onclick="selectProduct(this)">
+					<i class="fas fa-money-check-alt"></i>
+					<span>Payroll</span>
+				</button>
+				<button class="product-btn" data-product="Signage" onclick="selectProduct(this)">
+					<i class="fas fa-tv"></i>
+					<span>Signage</span>
+				</button>
+			</div>
 
-				<!-- Prénom -->
+			<!-- Badge produit actif -->
+			<div class="product-badge">
+				<span id="product-badge-text">DÉMONSTRATION ATA POS</span>
+			</div>
+
+			<form id="demo-form">
 				<div class="mb-3">
 					<label class="form-label" id="label-fname">Prénom</label>
-					<input type="text" class="form-control" name="first_name" required>
+					<input type="text" class="form-control" id="field-fname" required>
 				</div>
 
-				<!-- Nom -->
 				<div class="mb-3">
 					<label class="form-label" id="label-lname">Nom</label>
-					<input type="text" class="form-control" name="last_name" required>
+					<input type="text" class="form-control" id="field-lname" required>
 				</div>
 
-				<!-- Email -->
 				<div class="mb-3">
 					<label class="form-label" id="label-email">Adresse E-mail</label>
-					<input type="email" class="form-control" name="email" required>
+					<input type="email" class="form-control" id="field-email" required>
 				</div>
 
-				<!-- Téléphone -->
 				<div class="mb-3">
 					<label class="form-label" id="label-phone">Numéro de Téléphone</label>
-					<input type="tel" class="form-control" name="phone">
+					<input type="tel" class="form-control" id="field-phone">
 				</div>
 
-				<!-- Pays -->
 				<div class="mb-3">
 					<label class="form-label" id="label-country">Pays</label>
-					<select class="form-select" name="country" id="country-select" required>
+					<select class="form-select" id="field-country" required>
 						<option value="" disabled selected id="country-placeholder">— Sélectionner votre pays —</option>
 						<option value="Haiti" id="country-haiti">🇭🇹 Haïti</option>
 						<option value="United States" id="country-usa">🇺🇸 États-Unis</option>
@@ -191,10 +271,9 @@
 					</select>
 				</div>
 
-				<!-- Message -->
 				<div class="mb-3">
 					<label class="form-label" id="label-message">Message</label>
-					<textarea class="form-control" name="message" rows="3"></textarea>
+					<textarea class="form-control" id="field-message" rows="3"></textarea>
 				</div>
 
 				<div id="status"></div>
@@ -202,7 +281,6 @@
 				<button type="submit" class="btn-submit" id="btn-submit-demo">
 					Envoyer la Demande
 				</button>
-
 			</form>
 		</div>
 	</div>
@@ -213,28 +291,117 @@
 	<script>
 		emailjs.init("ooXSPg6L406knWIN7");
 
+		const SERVICE_ID = 'service_1pg74dh';
+		const TEMPLATE_ID = 'template_waqhd5l'; // Votre template Auto-Reply existant
+
+		/* ---- Liens vidéo par produit ---- */
+		const demoLinks = {
+			'ATA POS': 'https://vimeo.com/1114339259',
+			'Payroll': 'https://vimeo.com/1186542484?fl=ip&fe=ec', 
+			'Signage': 'https://vimeo.com/1186542703?fl=ip&fe=ec'  
+		};
+
+		const productBadgeLabels = {
+			fr: { 'ATA POS': 'DÉMONSTRATION ATA POS', 'Payroll': 'DÉMONSTRATION PAYROLL', 'Signage': 'DÉMONSTRATION SIGNAGE' },
+			en: { 'ATA POS': 'ATA POS DEMO', 'Payroll': 'PAYROLL DEMO', 'Signage': 'SIGNAGE DEMO' },
+			es: { 'ATA POS': 'DEMO ATA POS', 'Payroll': 'DEMO PAYROLL', 'Signage': 'DEMO SIGNAGE' }
+		};
+
+		/* ---- Sélection du produit ---- */
+		function selectProduct(btn) {
+			document.querySelectorAll('.product-btn').forEach(b => b.classList.remove('active'));
+			btn.classList.add('active');
+			document.getElementById('status').textContent = '';
+			const lang = localStorage.getItem('atalou_pref_lang') || 'fr';
+			const labels = productBadgeLabels[lang] || productBadgeLabels['fr'];
+			document.getElementById('product-badge-text').textContent = labels[btn.dataset.product] || btn.dataset.product;
+		}
+
+		/* ---- Mise à jour badge quand langue change ---- */
+		const _origSwitch = window.switchPageLang;
+		window.switchPageLang = async function (lang) {
+			if (_origSwitch) await _origSwitch(lang);
+			const activeBtn = document.querySelector('.product-btn.active');
+			if (activeBtn) {
+				const labels = productBadgeLabels[lang] || productBadgeLabels['fr'];
+				document.getElementById('product-badge-text').textContent = labels[activeBtn.dataset.product] || activeBtn.dataset.product;
+			}
+		};
+
+		/* ---- Pré-sélection via URL: demo.html?product=Payroll ---- */
+		(function () {
+			const p = new URLSearchParams(window.location.search).get('product');
+			if (p) {
+				const btn = document.querySelector(`.product-btn[data-product="${p}"]`);
+				if (btn) selectProduct(btn);
+			}
+		})();
+
+		/* ---- Soumission ---- */
 		document.getElementById('demo-form').addEventListener('submit', function (e) {
 			e.preventDefault();
 
-			const status = document.getElementById('status');
 			const lang = localStorage.getItem('atalou_pref_lang') || 'fr';
+			const activeProduct = document.querySelector('.product-btn.active')?.dataset.product || 'ATA POS';
+			const demoLink = demoLinks[activeProduct] || '#';
 
-			const messages = {
+			// Valeurs du formulaire
+			const fname = document.getElementById('field-fname').value.trim();
+			const lname = document.getElementById('field-lname').value.trim();
+			const email = document.getElementById('field-email').value.trim();
+			const phone = document.getElementById('field-phone').value.trim() || '—';
+			const country = document.getElementById('field-country').value;
+			const message = document.getElementById('field-message').value.trim() || '—';
+
+			// ── Réponse auto traduite envoyée au client ──
+			const replyTemplates = {
+				fr: `Bonjour ${fname},\n\nMerci de nous avoir contactés ! Nous avons bien reçu votre demande de démonstration pour ${activeProduct}.\n\nVoici le lien vers la démonstration :\n${demoLink}\n\nCordialement,\nL'équipe Atalou`,
+				en: `Hi ${fname},\n\nThank you for reaching out to us! We have received your demo request for ${activeProduct}.\n\nHere is the link to the demo:\n${demoLink}\n\nBest regards,\nThe Atalou Team`,
+				es: `Hola ${fname},\n\nGracias por contactarnos. Hemos recibido su solicitud de demostración para ${activeProduct}.\n\nAquí está el enlace a la demostración:\n${demoLink}\n\nAtentamente,\nEl equipo de Atalou`
+			};
+
+			// ── Message interne traduit reçu par Atalou ──
+			const internalTemplates = {
+				fr: `Nouvelle demande de démonstration\n\nProduit    : ${activeProduct}\nPrénom     : ${fname}\nNom        : ${lname}\nEmail      : ${email}\nTéléphone  : ${phone}\nPays       : ${country}\n\nMessage :\n${message}`,
+				en: `New demo request\n\nProduct    : ${activeProduct}\nFirst name : ${fname}\nLast name  : ${lname}\nEmail      : ${email}\nPhone      : ${phone}\nCountry    : ${country}\n\nMessage:\n${message}`,
+				es: `Nueva solicitud de demostración\n\nProducto   : ${activeProduct}\nNombre     : ${fname}\nApellido   : ${lname}\nEmail      : ${email}\nTeléfono   : ${phone}\nPaís       : ${country}\n\nMensaje:\n${message}`
+			};
+
+			// ── Messages UI ──
+			const uiMessages = {
 				fr: { sending: 'Envoi en cours...', success: 'Votre demande a été envoyée avec succès.', error: 'Une erreur est survenue. Veuillez réessayer.' },
 				en: { sending: 'Sending...', success: 'Your request has been sent successfully.', error: 'An error occurred. Please try again.' },
 				es: { sending: 'Enviando...', success: 'Su solicitud ha sido enviada con éxito.', error: 'Ocurrió un error. Por favor intente de nuevo.' }
 			};
-			const msg = messages[lang] || messages['fr'];
+			const msg = uiMessages[lang] || uiMessages['fr'];
 
+			const status = document.getElementById('status');
 			status.style.color = "#64ffda";
 			status.textContent = msg.sending;
 
-			emailjs.sendForm('service_1pg74dh', 'template_waqhd5l', this)
+			// ── Paramètres envoyés à EmailJS ──
+			const templateParams = {
+				product: activeProduct,
+				name: fname + ' ' + lname,
+				first_name: fname,
+				last_name: lname,
+				email: email,
+				phone: phone,
+				country: country,
+				message: message,
+				demo_link: demoLink,
+				reply_body: replyTemplates[lang] || replyTemplates['fr'],
+				formatted_message: internalTemplates[lang] || internalTemplates['fr']
+			};
+
+			// ── Envoi avec emailjs.send() ──
+			emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
 				.then(() => {
 					status.textContent = msg.success;
-					this.reset();
+					document.getElementById('demo-form').reset();
 				})
-				.catch(() => {
+				.catch((err) => {
+					console.error('EmailJS error:', err);
 					status.style.color = "#ff6b6b";
 					status.textContent = msg.error;
 				});
