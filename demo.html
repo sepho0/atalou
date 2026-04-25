@@ -12,210 +12,218 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-	<style>
-		:root {
-			--dark-blue: #0a192f;
-			--medium-blue: #112240;
-			--accent-color: #64ffda;
-			--light-slate: #ccd6f6;
-			--lightest-slate: #e6f1ff;
-		}
+<style>
+	:root {
+		/* --- THEME SOMBRE (Par défaut) --- */
+		--bg-gradient: linear-gradient(to bottom, #0a192f 0%, #0d1f3a 100%);
+		--card-bg: rgba(17, 34, 64, 0.85);
+		--accent-color: #64ffda;
+		--text-main: #ccd6f6;
+		/* Light slate */
+		--text-title: #e6f1ff;
+		/* Lightest slate */
+		--input-bg: rgba(255, 255, 255, 0.05);
+		--input-text: #e6f1ff;
+		--border-color: rgba(255, 255, 255, 0.15);
+		--shadow-color: rgba(0, 0, 0, 0.45);
+		--btn-text: #0a192f;
+		/* Texte foncé sur bouton turquoise */
+		--select-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2364ffda' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+	}
 
+	/* --- THEME CLAIR --- */
+	body.light-mode {
+		--bg-gradient: linear-gradient(to bottom, #F8F5F0 0%, #EDE8E1 100%);
+		--card-bg: #EDE8E1;
+		--accent-color: #1A56DB;
+		/* Bleu plus soutenu pour le contraste */
+		--text-main: #3D3530;
+		--text-title: #1E1A16;
+		--input-bg: rgba(255, 255, 255, 0.7);
+		--input-text: #1E1A16;
+		--border-color: rgba(0, 0, 0, 0.1);
+		--shadow-color: rgba(0, 0, 0, 0.1);
+		--btn-text: #ffffff;
+		/* Texte blanc sur bouton bleu */
+		--select-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%231A56DB' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+	}
 
-			body.light-mode {
-			--bg-color: #F8F5F0;
-			--card-bg: #EDE8E1;
-			--accent-color: #1A56DB;
-			--text-main: #3D3530;
-			--text-title: #1E1A16;
-			--shadow-color: rgba(0, 0, 0, 0.1);
-			--icon-bg: rgba(26, 86, 219, 0.15);
-			}
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		font-family: 'Inter', sans-serif;
+		background: var(--bg-gradient);
+		color: var(--text-main);
+		transition: background 0.4s ease, color 0.4s ease;
+	}
 
-		html,
-		body {
-			height: 100%;
-			margin: 0;
-			font-family: 'Inter', sans-serif;
-			background: linear-gradient(to bottom, #0a192f 0%, #0d1f3a 100%);
-			color: var(--lightest-slate);
-		}
+	.page-wrapper {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 24px;
+	}
 
-		.page-wrapper {
-			min-height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 24px;
-		}
+	.demo-card {
+		width: 100%;
+		max-width: 520px;
+		background: var(--card-bg);
+		backdrop-filter: blur(12px);
+		border-radius: 16px;
+		padding: 3rem;
+		box-shadow: 0 20px 40px var(--shadow-color), inset 0 0 0 1px var(--border-color);
+		transition: background 0.4s ease, box-shadow 0.4s ease;
+	}
 
+	.product-selector {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 2rem;
+		background: rgba(0, 0, 0, 0.05);
+		border-radius: 12px;
+		padding: 6px;
+	}
+
+	.product-btn {
+		flex: 1;
+		background: transparent;
+		border: none;
+		color: var(--text-main);
+		padding: 10px 8px;
+		border-radius: 8px;
+		font-size: 0.82rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.25s ease;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
+		opacity: 0.7;
+	}
+
+	.product-btn:hover {
+		opacity: 1;
+		background: rgba(100, 255, 218, 0.06);
+	}
+
+	.product-btn.active {
+		background: var(--accent-color);
+		color: var(--btn-text);
+		opacity: 1;
+		box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+	}
+
+	.product-badge {
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.product-badge span {
+		display: inline-block;
+		background: rgba(0, 0, 0, 0.03);
+		color: var(--accent-color);
+		font-size: 0.8rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		padding: 4px 14px;
+		border-radius: 20px;
+		border: 1px solid var(--accent-color);
+		text-transform: uppercase;
+	}
+
+	.demo-card h1 {
+		font-family: 'Playfair Display', serif;
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 0.5rem;
+		color: var(--text-title);
+	}
+
+	.demo-card p.subtitle {
+		text-align: center;
+		color: var(--text-main);
+		font-size: 0.95rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+	}
+
+	.form-label {
+		font-weight: 600;
+		color: var(--text-main);
+		margin-bottom: 6px;
+	}
+
+	.form-control,
+	.form-select {
+		background: var(--input-bg);
+		border: 1px solid var(--border-color);
+		color: var(--input-text);
+		padding: 0.7rem 0.75rem;
+		transition: all 0.3s ease;
+	}
+
+	.form-select {
+		background-image: var(--select-icon);
+		background-repeat: no-repeat;
+		background-position: right 0.75rem center;
+		background-size: 16px 12px;
+		padding-right: 2.5rem;
+		appearance: none;
+	}
+
+	.form-select option {
+		background: var(--card-bg);
+		color: var(--text-main);
+	}
+
+	.form-control::placeholder {
+		color: var(--text-main);
+		opacity: 0.5;
+	}
+
+	.form-control:focus,
+	.form-select:focus {
+		background: var(--input-bg);
+		border-color: var(--accent-color);
+		box-shadow: 0 0 0 0.15rem rgba(26, 86, 219, 0.2);
+		color: var(--input-text);
+		outline: none;
+	}
+
+	.btn-submit {
+		margin-top: 1.5rem;
+		width: 100%;
+		background: var(--accent-color);
+		color: var(--btn-text);
+		font-weight: 700;
+		padding: 0.75rem;
+		border-radius: 10px;
+		border: none;
+		transition: all 0.3s ease;
+		cursor: pointer;
+	}
+
+	.btn-submit:hover {
+		opacity: 0.9;
+		transform: translateY(-2px);
+	}
+
+	#status {
+		margin-top: 1rem;
+		text-align: center;
+		font-size: 0.9rem;
+		font-weight: 600;
+	}
+
+	@media (max-width: 576px) {
 		.demo-card {
-			width: 100%;
-			max-width: 520px;
-			background: rgba(17, 34, 64, 0.85);
-			backdrop-filter: blur(12px);
-			border-radius: 16px;
-			padding: 3rem;
-			box-shadow:
-				0 20px 40px rgba(0, 0, 0, 0.45),
-				inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+			padding: 2rem 1.75rem;
 		}
-
-		.product-selector {
-			display: flex;
-			gap: 10px;
-			margin-bottom: 2rem;
-			background: rgba(255, 255, 255, 0.04);
-			border-radius: 12px;
-			padding: 6px;
-		}
-
-		.product-btn {
-			flex: 1;
-			background: transparent;
-			border: none;
-			color: var(--light-slate);
-			padding: 10px 8px;
-			border-radius: 8px;
-			font-size: 0.82rem;
-			font-weight: 600;
-			cursor: pointer;
-			transition: all 0.25s ease;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			gap: 4px;
-		}
-
-		.product-btn i {
-			font-size: 1.1rem;
-		}
-
-		.product-btn:hover {
-			color: var(--lightest-slate);
-			background: rgba(100, 255, 218, 0.06);
-		}
-
-		.product-btn.active {
-			background: var(--accent-color);
-			color: var(--dark-blue);
-			box-shadow: 0 4px 14px rgba(100, 255, 218, 0.25);
-		}
-
-		.product-badge {
-			text-align: center;
-			margin-bottom: 1.5rem;
-		}
-
-		.product-badge span {
-			display: inline-block;
-			background: rgba(100, 255, 218, 0.12);
-			color: var(--accent-color);
-			font-size: 0.8rem;
-			font-weight: 700;
-			letter-spacing: 1px;
-			padding: 4px 14px;
-			border-radius: 20px;
-			border: 1px solid rgba(100, 255, 218, 0.25);
-			text-transform: uppercase;
-		}
-
-		.demo-card h1 {
-			font-family: 'Playfair Display', serif;
-			font-size: 2rem;
-			text-align: center;
-			margin-bottom: 0.5rem;
-			color: var(--lightest-slate);
-		}
-
-		.demo-card p.subtitle {
-			text-align: center;
-			color: var(--light-slate);
-			font-size: 0.95rem;
-			margin-bottom: 2rem;
-		}
-
-		.form-label {
-			font-weight: 600;
-			color: var(--light-slate);
-			margin-bottom: 6px;
-		}
-
-		.form-control,
-		.form-select {
-			background: rgba(255, 255, 255, 0.05);
-			border: 1px solid rgba(255, 255, 255, 0.15);
-			color: var(--lightest-slate);
-			padding: 0.7rem 0.75rem;
-		}
-
-		.form-select {
-			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2364ffda' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-			background-repeat: no-repeat;
-			background-position: right 0.75rem center;
-			background-size: 16px 12px;
-			padding-right: 2.5rem;
-			-webkit-appearance: none;
-			-moz-appearance: none;
-			appearance: none;
-		}
-
-		.form-select option {
-			background: #112240;
-			color: var(--lightest-slate);
-		}
-
-		.form-control::placeholder {
-			color: rgba(230, 241, 255, 0.5);
-		}
-
-		.form-control:focus,
-		.form-select:focus {
-			background: rgba(255, 255, 255, 0.08);
-			border-color: var(--accent-color);
-			box-shadow: 0 0 0 0.15rem rgba(100, 255, 218, 0.25);
-			color: var(--lightest-slate);
-		}
-
-		textarea.form-control {
-			resize: none;
-		}
-
-		.btn-submit {
-			margin-top: 1.5rem;
-			width: 100%;
-			background: var(--accent-color);
-			color: var(--dark-blue);
-			font-weight: 700;
-			padding: 0.75rem;
-			border-radius: 10px;
-			border: none;
-			transition: all 0.3s ease;
-			cursor: pointer;
-		}
-
-		.btn-submit:hover {
-			background: #52e1c9;
-			transform: translateY(-2px);
-		}
-
-		#status {
-			margin-top: 1rem;
-			text-align: center;
-			font-size: 0.9rem;
-		}
-
-		@media (max-width: 576px) {
-			.demo-card {
-				padding: 2rem 1.75rem;
-			}
-
-			.product-btn {
-				font-size: 0.75rem;
-				padding: 8px 4px;
-			}
-		}
-	</style>
+	}
+</style>
 </head>
 
 <body>
@@ -297,7 +305,10 @@
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-	<script src="translates/international.js"></script>
+<script src="translates/fr.js"></script>
+<script src="translates/en.js"></script>
+<script src="translates/es.js"></script>
+<script src="translates/international.js"></script>
 
 	<script>
 		emailjs.init("ooXSPg6L406knWIN7");

@@ -1,4 +1,5 @@
-{
+window.__TRANSLATIONS__ = window.__TRANSLATIONS__ || {};
+window.__TRANSLATIONS__['en'] = {
   "nav_services": "Services",
   "nav_partners": "Partners",
   "nav_about": "About Us",
@@ -6,7 +7,6 @@
   "nav_contact": "Contact",
   "nav_region": "Your Region",
   "nav_cta": "Access →",
-
   "hero_title_line1": "Atalou",
   "hero_title_accent": "Microsystem",
   "hero_title_line3": "S.A",
@@ -17,20 +17,16 @@
   "hero_manage": "We Manage.",
   "hero_support": "We Support.",
   "hero_contact": "Contact us",
-
   "hero_signage_subtitle": "Broadcast your content",
   "hero_signage_text": "In one click, broadcast your multimedia content on all your screens from a single platform.",
   "hero_signage_button": "Discover SIGNAGE",
-
   "hero_atapos_subtitle": "PARTNER OF YOUR GROWTH",
   "hero_atapos_title": "ATA POS: The future of your management",
   "hero_atapos_text": "Optimize your sales and inventory in real-time with our flagship solution. An intuitive interface designed to maximize your business efficiency.",
   "hero_atapos_button": "Discover ATA POS",
-
   "stat1": "Years of experience",
   "stat2": "Active support",
   "scroll_text": "Scroll",
-
   "svc_tag": "Our solutions",
   "svc_title": "What we offer",
   "svc_sub": "A complete range of IT solutions to accelerate your business.",
@@ -48,8 +44,10 @@
   "svc_desc_6": "Cameras, perimeter security, biometric attendance and access management.",
   "svc_name_7": "Software Support",
   "svc_desc_7": "QuickBooks, ACCPAC, CRE, OB POS, antivirus protection and firewall.",
+  "svc_desc_8": "IT equipment sales, GPS geolocation systems, and custom technology R&D solutions.",
+  "svc_name_9": "Payroll",
+  "svc_desc_9": "Automate payroll processing, leave management, and social declarations.",
   "btn_more": "Learn more",
-
   "about_title": "Our History & Philosophy",
   "about_subtitle": "Discover more than two decades of innovation and technological commitment.",
   "about_description": "Atalou Microsystem is an innovative company specializing in IT management and business solutions for over 20 years. We help businesses optimize sales, secure data, and improve efficiency through reliable and tailored solutions.",
@@ -59,10 +57,8 @@
   "about_vision_text": "Become the preferred partner for companies in their digital and technological transformation.",
   "about_values_title": "Our Values",
   "about_values_text": "Innovation, reliability, security, and commitment to our clients and teams.",
-
   "services_title": "Technology Solutions",
   "services_subtitle": "Discover our flagship solutions and IT expertise.",
-
   "services_product_badge": "INNOVATIVE PRODUCT",
   "services_product_title": "ATA POS System: Simplified Management, Maximum Growth",
   "services_product_text": "The ATA POS system is a complete solution that helps your business manage sales, inventory, employees, and offers credit sales.",
@@ -70,56 +66,41 @@
   "services_product_feature2": "Inventory and expiration date tracking",
   "services_product_feature3": "Employee and shift management",
   "services_product_button": "See More",
-
   "services_infrastructure_title": "Support and Maintenance",
   "services_infra_f1": "Setup, monitoring and optimization of networks",
   "services_infra_f2": "Fire alarm and detection systems",
   "services_infra_f3": "Video surveillance systems",
   "services_infra_f4": "Maintenance of physical and logical IT networks",
   "services_infra_f5": "System repair and ongoing support",
-
   "services_support_title": "Software Support",
   "services_support_f1": "Technical support (CRE, OB POS, ASI Front Desk)",
   "services_support_f2": "Accounting systems (QuickBooks, ACCPAC)",
   "services_support_f3": "PC protection (Antivirus, Firewall)",
-
   "services_connectivity_title": "Network Solutions",
   "services_network_f1": "IP Telephony (VoIP)",
   "services_network_f2": "Structured cabling (UTP)",
   "services_network_f3": "Point-to-Point connection (P2P)",
   "services_network_f4": "Point-to-multipoint connection",
-
   "services_development_title": "Web Services",
   "services_web_f1": "Domain name registration",
   "services_web_f2": "Web hosting solutions",
   "services_web_f3": "Custom development of websites and mobile applications",
-
   "services_security_title": "Defense and Surveillance",
   "services_security_f1": "Security camera systems",
   "services_security_f2": "Perimeter security solutions",
   "services_security_f3": "Attendance and biometric management systems",
-
   "services_products_title": "Other Services",
   "services_other_f1": "Sale of computer equipment",
   "services_other_f2": "GPS geolocation systems for vehicles and people",
   "services_other_f3": "Custom research and R&D of technology solutions",
   "services_other_f4": "ATA point of sale system (ATA POS)",
-
-		"svc_desc_8": "IT equipment sales, GPS geolocation systems, and custom technology R&D solutions.",
- 
-"svc_name_9": "Payroll",
-"svc_desc_9": "Automate payroll processing, leave management, and social declarations.",
- 
-
   "services_view_more": "See More",
-
   "part_tag": "Partners",
   "part_title": "Our trusted partners",
   "part_sub": "A network of leading brands to offer you the best.",
   "part_clients": "They trust us",
   "partnerships_title": "Our Trusted Partners",
   "clients_title": "They Trust Us",
-
   "region_title": "Select your country",
   "region_sub": "Access the website and offers tailored to your local market.",
   "region_desc": "Each market has its specificities. Select your country to access the dedicated portal with offers, contacts and support for your region.",
@@ -135,20 +116,16 @@
   "country_haiti": " Haiti",
   "country_usa": " United States",
   "country_dom": " Dominican Republic",
-
   "team_title": "The Team Behind the Innovation",
   "team_ceo_role": "CEO & Founder",
   "team_director_role": "Executive Director",
   "team_tecnic_role": "Technical Director",
   "team_bs_role": "Business Solutions",
-
   "contact_title": "Let's discuss your project",
   "contact_email_title": "Email Address",
   "contact_phone_title": "Main Phone",
-
   "footer_rights": "All rights reserved.",
   "footer_copyright": "All rights reserved.",
-
   "demo_title": "Request a Demo",
   "demo_subtitle": "Discover how Atalou Microsystem can optimize your operations.",
   "label_fname": "First Name",
@@ -160,7 +137,6 @@
   "demo_sending": "Sending...",
   "demo_success": "Your request has been sent successfully.",
   "demo_error": "An error occurred. Please try again.",
-
   "pos_page_title": "ATAPOS – Solution Details",
   "pos_nav_home": "Home",
   "pos_nav_features": "Features",
@@ -210,7 +186,6 @@
   "pos_payment_plan": "Selected plan:",
   "pos_payment_card": "Credit card",
   "pos_payment_btn": "Continue to payment",
-
   "support_page_title": "IT Support & Maintenance",
   "support_page_sub": "Reliable, secure and scalable solutions to ensure the continuity, performance and security of your technology infrastructure.",
   "support_s1_title": "Network Setup & Optimization",
@@ -224,7 +199,6 @@
   "support_s5_title": "Repair & Ongoing Support",
   "support_s5_text": "Reactive technical assistance, rapid diagnosis and lasting solutions to minimize interruptions. Our continuous support guarantees the continuity of your operations and the peace of mind of your business.",
   "back_to_services": "Back to services",
-
   "logiciel_page_title": "Software Support",
   "logiciel_page_sub": "Ensure the continuity of your operations with our expertise in professional software and system protection.",
   "logiciel_s1_title": "Technical Support",
@@ -233,7 +207,6 @@
   "logiciel_s2_text": "Setup and support for QuickBooks, ACCPAC and other accounting systems. Optimize your financial processes and gain efficiency with dedicated guidance.",
   "logiciel_s3_title": "PC Protection",
   "logiciel_s3_text": "Secure your computers with antivirus, firewalls and advanced protection solutions. Prevent attacks and protect your professional data against any threat.",
-
   "reseau_page_title": "Network Solutions",
   "reseau_page_sub": "Optimize the connectivity and performance of your network infrastructure with our tailored solutions.",
   "reseau_s1_title": "IP Telephony (VoIP)",
@@ -244,7 +217,6 @@
   "reseau_s3_text": "Establish secure direct links between your sites. Ensure fast, stable and reliable communication for your critical data.",
   "reseau_s4_title": "Point-to-Multipoint Connection",
   "reseau_s4_text": "Connect a main site to multiple remote sites with secure links, ideal for multi-site companies and data centralization.",
-
   "web_page_title": "Web Services",
   "web_page_sub": "Develop your digital presence with professional and personalized solutions, from domain to application.",
   "web_s1_title": "Domain Name Registration",
@@ -253,7 +225,6 @@
   "web_s2_text": "Enjoy reliable and high-performance hosting for your sites and applications, with secure backups and dedicated technical support.",
   "web_s3_title": "Custom Development",
   "web_s3_text": "Creation of personalized websites and mobile applications, optimized for your business needs and users, with modern design and advanced features.",
-
   "defense_page_title": "Defense & Surveillance",
   "defense_page_sub": "Smart and reliable security solutions to protect your premises, assets and employees.",
   "defense_s1_title": "Security Camera Systems",
@@ -262,7 +233,6 @@
   "defense_s2_text": "Complete protection of your buildings and sites using detectors, barriers and automated alerts, ensuring total access control.",
   "defense_s3_title": "Attendance & Biometric Management Systems",
   "defense_s3_text": "Precise attendance tracking and secure access using biometric technologies. Simplifies employee management while strengthening security.",
-
   "autres_page_title": "Other Services",
   "autres_page_sub": "Complementary services to meet all your technological needs and optimize your operations.",
   "autres_s1_title": "Computer Equipment Sales",
@@ -273,8 +243,6 @@
   "autres_s3_text": "Creation of customized technology solutions to meet your unique needs and improve your operational efficiency.",
   "autres_s4_title": "ATA Point of Sale System (ATA POS)",
   "autres_s4_text": "Installation and configuration of complete ATA POS solutions to manage your sales, inventory and customers efficiently and intuitively.",
-
-		
   "sig_page_title": "ATALOU - Digital Signage",
   "nav_home": "Home",
   "sig_nav_what": "What is it?",
@@ -292,70 +260,56 @@
   "sig_f3_title": "Cost Reduction",
   "sig_f3_text": "Eliminate printing costs and delivery delays for your advertising materials.",
   "sig_cta_title": "Ready to energize your screens?",
-
-
-		"payroll_page_title":        "Atapayroll – Payroll Management | Atalou Microsystem",
-
-"payroll_nav_home":          "Home",
-"payroll_nav_about":         "About",
-"payroll_nav_features":      "Features",
-"payroll_nav_how":           "How it works",
-"payroll_nav_contact":       "Contact",
-
-"payroll_badge":             "Payroll Management",
-"payroll_hero_title_1":      "AtaPayroll",
-
-"payroll_hero_text":         "A complete solution to automate payroll management, leave tracking, and social declarations — tailored for all businesses and everywhere.",
-"payroll_hero_btn_contact":  "Contact us",
-"payroll_hero_btn_features": "See features",
-
-"payroll_stat1":             "Compliant",
-"payroll_stat2":             "Active support",
-"payroll_stat3":             "Multi-currency",
-
-"payroll_about_title":       "What is AtaPayroll?",
-"payroll_about_p1":          "Atapayroll is a payroll management solution designed for businesses operating in Haiti and the Caribbean. It automates the full payroll cycle: salary calculations, social contributions, leave management, and pay slip generation.",
-"payroll_about_p2":          "With an intuitive interface and compliance with local regulations, it allows HR teams to save time, reduce errors, and ensure transparency in salary processing.",
-"payroll_about_p3":          "Compatible with local  and international  currencies, it adapts to organizations of all sizes SMEs, large enterprises, and NGOs.",
-
-"payroll_features_title":    "Why choose AtaPayroll?",
-
-"payroll_feature1_title":    "Automated payroll calculation",
-"payroll_feature1_text":     "Base salaries, overtime, bonuses, and deductions calculated automatically at every pay cycle.",
-"payroll_feature2_title":    "Instant pay slips",
-"payroll_feature2_text":     "Digital generation and distribution of pay slips in one click, accessible anytime by employees.",
-"payroll_feature3_title":    "Leave & absence management",
-"payroll_feature3_text":     "Real-time tracking of annual leave, sick days, maternity, and absences with automatic payroll impact.",
-"payroll_feature4_title":    "Regulatory compliance",
-"payroll_feature4_text":     "Compliance with Haitian legal requirements: ONA, OFATMA contributions, income tax, and social declarations.",
-"payroll_feature5_title":    "Multi-currency",
-"payroll_feature5_text":     "Simultaneous management in all currencies on employee contracts.",
-"payroll_feature6_title":    "HR reports & analytics",
-"payroll_feature6_text":     "Dashboards and detailed reports on payroll costs, department breakdowns, and HR trends.",
-"payroll_feature7_title":    "Multi-employee management",
-"payroll_feature7_text":     "Manage tens or hundreds of employees with individualized profiles, grades, and pay structures.",
-"payroll_feature8_title":    "Security & confidentiality",
-"payroll_feature8_text":     "Encrypted data, role-based access, and audit logs to ensure salary information confidentiality.",
-"payroll_feature9_title":    "Easy integration",
-"payroll_feature9_text":     "Compatible with your existing tools: QuickBooks, ACCPAC, biometric time clocks, and ATAPOS.",
-
-"payroll_how_title":         "How does it work?",
-"payroll_how_sub":           "A simple, structured process to ensure accurate payroll every cycle.",
-
-"payroll_step1_title":       "Employee setup",
-"payroll_step1_text":        "Create employee profiles: contract, base salary, benefits, contributions, and department.",
-"payroll_step2_title":       "Monthly data collection",
-"payroll_step2_text":        "The system automatically integrates absences, overtime, and bonuses for the period.",
-"payroll_step3_title":       "Calculation & validation",
-"payroll_step3_text":        "Payroll is calculated automatically. The HR manager validates or adjusts before finalizing.",
-"payroll_step4_title":       "Pay slip distribution",
-"payroll_step4_text":        "Pay slips are generated and sent digitally to each employee in seconds.",
-"payroll_step5_title":       "Reports & archiving",
-"payroll_step5_text":        "All payroll cycles are archived and accessible for audits, tax declarations, or HR analysis.",
-
-"payroll_cta_title":         "Ready to simplify your payroll management?",
-"payroll_cta_sub":           "Contact our team for a personalized demonstration and discover how Atalou Payroll can transform your HR department.",
-"payroll_cta_btn":           "Request a demonstration"
-}
-
-
+  "payroll_page_title": "Atapayroll – Payroll Management | Atalou Microsystem",
+  "payroll_nav_home": "Home",
+  "payroll_nav_about": "About",
+  "payroll_nav_features": "Features",
+  "payroll_nav_how": "How it works",
+  "payroll_nav_contact": "Contact",
+  "payroll_badge": "Payroll Management",
+  "payroll_hero_title_1": "AtaPayroll",
+  "payroll_hero_text": "A complete solution to automate payroll management, leave tracking, and social declarations — tailored for all businesses and everywhere.",
+  "payroll_hero_btn_contact": "Contact us",
+  "payroll_hero_btn_features": "See features",
+  "payroll_stat1": "Compliant",
+  "payroll_stat2": "Active support",
+  "payroll_stat3": "Multi-currency",
+  "payroll_about_title": "What is AtaPayroll?",
+  "payroll_about_p1": "Atapayroll is a payroll management solution designed for businesses operating in Haiti and the Caribbean. It automates the full payroll cycle: salary calculations, social contributions, leave management, and pay slip generation.",
+  "payroll_about_p2": "With an intuitive interface and compliance with local regulations, it allows HR teams to save time, reduce errors, and ensure transparency in salary processing.",
+  "payroll_about_p3": "Compatible with local and international currencies, it adapts to organizations of all sizes SMEs, large enterprises, and NGOs.",
+  "payroll_features_title": "Why choose AtaPayroll?",
+  "payroll_feature1_title": "Automated payroll calculation",
+  "payroll_feature1_text": "Base salaries, overtime, bonuses, and deductions calculated automatically at every pay cycle.",
+  "payroll_feature2_title": "Instant pay slips",
+  "payroll_feature2_text": "Digital generation and distribution of pay slips in one click, accessible anytime by employees.",
+  "payroll_feature3_title": "Leave & absence management",
+  "payroll_feature3_text": "Real-time tracking of annual leave, sick days, maternity, and absences with automatic payroll impact.",
+  "payroll_feature4_title": "Regulatory compliance",
+  "payroll_feature4_text": "Compliance with Haitian legal requirements: ONA, OFATMA contributions, income tax, and social declarations.",
+  "payroll_feature5_title": "Multi-currency",
+  "payroll_feature5_text": "Simultaneous management in all currencies on employee contracts.",
+  "payroll_feature6_title": "HR reports & analytics",
+  "payroll_feature6_text": "Dashboards and detailed reports on payroll costs, department breakdowns, and HR trends.",
+  "payroll_feature7_title": "Multi-employee management",
+  "payroll_feature7_text": "Manage tens or hundreds of employees with individualized profiles, grades, and pay structures.",
+  "payroll_feature8_title": "Security & confidentiality",
+  "payroll_feature8_text": "Encrypted data, role-based access, and audit logs to ensure salary information confidentiality.",
+  "payroll_feature9_title": "Easy integration",
+  "payroll_feature9_text": "Compatible with your existing tools: QuickBooks, ACCPAC, biometric time clocks, and ATAPOS.",
+  "payroll_how_title": "How does it work?",
+  "payroll_how_sub": "A simple, structured process to ensure accurate payroll every cycle.",
+  "payroll_step1_title": "Employee setup",
+  "payroll_step1_text": "Create employee profiles: contract, base salary, benefits, contributions, and department.",
+  "payroll_step2_title": "Monthly data collection",
+  "payroll_step2_text": "The system automatically integrates absences, overtime, and bonuses for the period.",
+  "payroll_step3_title": "Calculation & validation",
+  "payroll_step3_text": "Payroll is calculated automatically. The HR manager validates or adjusts before finalizing.",
+  "payroll_step4_title": "Pay slip distribution",
+  "payroll_step4_text": "Pay slips are generated and sent digitally to each employee in seconds.",
+  "payroll_step5_title": "Reports & archiving",
+  "payroll_step5_text": "All payroll cycles are archived and accessible for audits, tax declarations, or HR analysis.",
+  "payroll_cta_title": "Ready to simplify your payroll management?",
+  "payroll_cta_sub": "Contact our team for a personalized demonstration and discover how Atalou Payroll can transform your HR department.",
+  "payroll_cta_btn": "Request a demonstration"
+};

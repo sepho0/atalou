@@ -1,4 +1,5 @@
-{
+window.__TRANSLATIONS__ = window.__TRANSLATIONS__ || {};
+window.__TRANSLATIONS__['es'] = {
   "nav_services": "Servicios",
   "nav_partners": "Socios",
   "nav_about": "Sobre Nosotros",
@@ -6,7 +7,6 @@
   "nav_contact": "Contacto",
   "nav_region": "Tu región",
   "nav_cta": "Acceder →",
-
   "hero_title_line1": "Atalou",
   "hero_title_accent": "Microsystem",
   "hero_title_line3": "S.A",
@@ -17,20 +17,16 @@
   "hero_manage": "Gestionamos.",
   "hero_support": "Soportamos.",
   "hero_contact": "Contáctenos",
-
   "hero_signage_subtitle": "Transmita sus contenidos",
   "hero_signage_text": "En un clic, transmita sus contenidos multimedia en sus pantallas desde una sola plataforma.",
   "hero_signage_button": "Descubrir SIGNAGE",
-
   "hero_atapos_subtitle": "SOCIO DE SU CRECIMIENTO",
   "hero_atapos_title": "ATA POS: El futuro de su gestión",
   "hero_atapos_text": "Optimice sus ventas e inventario en tiempo real con nuestra solución estrella. Una interfaz intuitiva diseñada para maximizar su eficiencia comercial.",
   "hero_atapos_button": "Descubrir ATA POS",
-
   "stat1": "Años de experiencia",
   "stat2": "Soporte activo",
   "scroll_text": "Desplazar",
-
   "svc_tag": "Nuestras soluciones",
   "svc_title": "Lo que ofrecemos",
   "svc_sub": "Una gama completa de soluciones de TI para acelerar su negocio.",
@@ -48,8 +44,10 @@
   "svc_desc_6": "Cámaras, seguridad perimetral, gestión biométrica de asistencia y acceso.",
   "svc_name_7": "Soporte de Software",
   "svc_desc_7": "QuickBooks, ACCPAC, CRE, OB POS, protección antivirus y firewall.",
+  "svc_desc_8": "Venta de equipos informáticos, geolocalización GPS y soluciones tecnológicas de I+D personalizadas.",
+  "svc_name_9": "Nómina",
+  "svc_desc_9": "Automatice la gestión de nóminas, vacaciones y declaraciones sociales.",
   "btn_more": "Saber más",
-
   "about_title": "Nuestra Historia y Filosofía",
   "about_subtitle": "Descubra más de dos décadas de innovación y compromiso tecnológico.",
   "about_description": "Atalou Microsystem es una empresa innovadora especializada en la gestión informática y soluciones empresariales durante más de 20 años. Ayudamos a las empresas a optimizar ventas, proteger datos y mejorar su eficiencia.",
@@ -59,10 +57,8 @@
   "about_vision_text": "Convertirnos en el socio preferido de las empresas en su transformación digital y tecnológica.",
   "about_values_title": "Nuestros Valores",
   "about_values_text": "Innovación, fiabilidad, seguridad y compromiso con nuestros clientes y equipos.",
-
   "services_title": "Soluciones Tecnológicas",
   "services_subtitle": "Descubra nuestras soluciones principales y experiencia en TI.",
-
   "services_product_badge": "PRODUCTO INNOVADOR",
   "services_product_title": "Sistema ATA POS: Gestión Simplificada, Crecimiento Máximo",
   "services_product_text": "El sistema ATA POS es una solución completa que ayuda a su negocio a gestionar ventas, inventario, empleados y ventas a crédito.",
@@ -70,57 +66,41 @@
   "services_product_feature2": "Seguimiento de inventario y fechas de vencimiento",
   "services_product_feature3": "Gestión de empleados y turnos de trabajo",
   "services_product_button": "Ver Más",
-
   "services_infrastructure_title": "Soporte y Mantenimiento",
   "services_infra_f1": "Instalación, monitoreo y optimización de redes",
   "services_infra_f2": "Sistemas de alarma y detección de incendios",
   "services_infra_f3": "Sistemas de videovigilancia",
   "services_infra_f4": "Mantenimiento de redes informáticas físicas y lógicas",
   "services_infra_f5": "Reparación de sistemas y soporte continuo",
-
   "services_support_title": "Soporte de Software",
   "services_support_f1": "Soporte técnico (CRE, OB POS, ASI Front Desk)",
   "services_support_f2": "Sistemas contables (QuickBooks, ACCPAC)",
   "services_support_f3": "Protección del PC (Antivirus, Cortafuegos)",
-
   "services_connectivity_title": "Soluciones de Red",
   "services_network_f1": "Telefonía IP (VoIP)",
   "services_network_f2": "Cableado estructurado (UTP)",
   "services_network_f3": "Conexión Punto a Punto (P2P)",
   "services_network_f4": "Conexión punto a multipunto",
-
   "services_development_title": "Servicios Web",
   "services_web_f1": "Registro de nombres de dominio",
   "services_web_f2": "Soluciones de alojamiento web",
   "services_web_f3": "Desarrollo a medida de sitios web y aplicaciones móviles",
-
   "services_security_title": "Defensa y Vigilancia",
   "services_security_f1": "Sistemas de cámaras de seguridad",
   "services_security_f2": "Soluciones de seguridad perimetral",
   "services_security_f3": "Sistemas de gestión de asistencia y biometría",
-
   "services_products_title": "Otros Servicios",
   "services_other_f1": "Venta de equipos informáticos",
   "services_other_f2": "Sistemas de geolocalización GPS para vehículos y personas",
   "services_other_f3": "Investigación personalizada y I+D de soluciones tecnológicas",
   "services_other_f4": "Sistema de punto de venta ATA (ATA POS)",
-
-
-		"svc_desc_8": "Venta de equipos informáticos, geolocalización GPS y soluciones tecnológicas de I+D personalizadas.",
- 
-"svc_name_9": "Nómina",
-"svc_desc_9": "Automatice la gestión de nóminas, vacaciones y declaraciones sociales .",
- 
-
   "services_view_more": "Ver Más",
-
   "part_tag": "Socios",
   "part_title": "Nuestros socios de confianza",
   "part_sub": "Una red de marcas líderes para ofrecerle lo mejor.",
   "part_clients": "Confían en nosotros",
   "partnerships_title": "Nuestros Socios de Confianza",
   "clients_title": "Confían en Nosotros",
-
   "region_title": "Selecciona tu país",
   "region_sub": "Acceda al sitio web y a las ofertas adaptadas a su mercado local.",
   "region_desc": "Cada mercado tiene sus especificidades. Seleccione su país para acceder al portal dedicado con ofertas, contactos y soporte de su región.",
@@ -136,20 +116,16 @@
   "country_haiti": " Haití",
   "country_usa": " Estados Unidos",
   "country_dom": "República Dominicana",
-
   "team_title": "El Equipo Detrás de la Innovación",
   "team_ceo_role": "CEO y Fundador",
   "team_director_role": "Directora Ejecutiva",
   "team_tecnic_role": "Director Técnico",
   "team_bs_role": "Soluciones Comerciales",
-
   "contact_title": "Hablemos de su proyecto",
   "contact_email_title": "Correo Electrónico",
   "contact_phone_title": "Teléfono Principal",
-
   "footer_rights": "Todos los derechos reservados.",
   "footer_copyright": "Todos los derechos reservados.",
-
   "demo_title": "Solicitar una Demostración",
   "demo_subtitle": "Descubra cómo Atalou Microsystem puede optimizar sus operaciones.",
   "label_fname": "Nombre",
@@ -161,7 +137,6 @@
   "demo_sending": "Enviando...",
   "demo_success": "Su solicitud ha sido enviada con éxito.",
   "demo_error": "Ocurrió un error. Por favor intente de nuevo.",
-
   "pos_page_title": "ATAPOS – Detalles de la solución",
   "pos_nav_home": "Inicio",
   "pos_nav_features": "Características",
@@ -211,7 +186,6 @@
   "pos_payment_plan": "Plan seleccionado:",
   "pos_payment_card": "Tarjeta bancaria",
   "pos_payment_btn": "Continuar con el pago",
-
   "support_page_title": "Soporte y Mantenimiento IT",
   "support_page_sub": "Soluciones fiables, seguras y escalables para garantizar la continuidad, el rendimiento y la seguridad de su infraestructura tecnológica.",
   "support_s1_title": "Instalación y optimización de redes",
@@ -225,7 +199,6 @@
   "support_s5_title": "Reparación y soporte continuo",
   "support_s5_text": "Asistencia técnica reactiva, diagnóstico rápido y soluciones duraderas para minimizar las interrupciones. Nuestro soporte continuo garantiza la continuidad de sus operaciones y la tranquilidad de su empresa.",
   "back_to_services": "Volver a los servicios",
-
   "logiciel_page_title": "Soporte de Software",
   "logiciel_page_sub": "Garantice la continuidad de sus operaciones con nuestra experiencia en software profesional y protección de sistemas.",
   "logiciel_s1_title": "Soporte técnico",
@@ -234,7 +207,6 @@
   "logiciel_s2_text": "Instalación y soporte para QuickBooks, ACCPAC y otros sistemas contables. Optimice sus procesos financieros y gane eficiencia con una guía dedicada.",
   "logiciel_s3_title": "Protección del PC",
   "logiciel_s3_text": "Proteja sus computadoras con antivirus, cortafuegos y soluciones avanzadas de protección. Prevenga ataques y proteja sus datos profesionales contra cualquier amenaza.",
-
   "reseau_page_title": "Soluciones de Red",
   "reseau_page_sub": "Optimice la conectividad y el rendimiento de su infraestructura de red con nuestras soluciones personalizadas.",
   "reseau_s1_title": "Telefonía IP (VoIP)",
@@ -245,7 +217,6 @@
   "reseau_s3_text": "Establezca enlaces directos seguros entre sus sitios. Garantice una comunicación rápida, estable y fiable para sus datos críticos.",
   "reseau_s4_title": "Conexión Punto a Multipunto",
   "reseau_s4_text": "Conecte un sitio principal a varios sitios remotos con enlaces seguros, ideales para empresas multi-sitio y centralización de datos.",
-
   "web_page_title": "Servicios Web",
   "web_page_sub": "Desarrolle su presencia digital con soluciones profesionales y personalizadas, del dominio a la aplicación.",
   "web_s1_title": "Registro de nombres de dominio",
@@ -254,7 +225,6 @@
   "web_s2_text": "Disfrute de un alojamiento fiable y de alto rendimiento para sus sitios y aplicaciones, con copias de seguridad y soporte técnico dedicado.",
   "web_s3_title": "Desarrollo a medida",
   "web_s3_text": "Creación de sitios web y aplicaciones móviles personalizadas, optimizadas para sus necesidades empresariales y usuarios, con diseño moderno y funcionalidades avanzadas.",
-
   "defense_page_title": "Defensa y Vigilancia",
   "defense_page_sub": "Soluciones de seguridad inteligentes y fiables para proteger sus instalaciones, bienes y colaboradores.",
   "defense_s1_title": "Sistemas de cámaras de seguridad",
@@ -263,7 +233,6 @@
   "defense_s2_text": "Protección completa de sus edificios y sitios mediante detectores, barreras y alertas automatizadas, garantizando un control total de los accesos.",
   "defense_s3_title": "Sistemas de gestión de asistencia y biometría",
   "defense_s3_text": "Seguimiento preciso de asistencias y accesos seguros mediante tecnologías biométricas. Simplifica la gestión de empleados y refuerza la seguridad.",
-
   "autres_page_title": "Otros Servicios",
   "autres_page_sub": "Servicios complementarios para satisfacer todas sus necesidades tecnológicas y optimizar sus operaciones.",
   "autres_s1_title": "Venta de equipos informáticos",
@@ -274,8 +243,6 @@
   "autres_s3_text": "Creación de soluciones tecnológicas personalizadas para satisfacer sus necesidades únicas y mejorar su eficiencia operativa.",
   "autres_s4_title": "Sistema de punto de venta ATA (ATA POS)",
   "autres_s4_text": "Instalación y configuración de soluciones ATA POS completas para gestionar sus ventas, inventario y clientes de forma eficiente e intuitiva.",
-
-		
   "sig_page_title": "ATALOU - Señalización Digital",
   "nav_home": "Inicio",
   "sig_nav_what": "¿Qué es?",
@@ -293,72 +260,57 @@
   "sig_f3_title": "Reducción de Costes",
   "sig_f3_text": "Elimine los gastos de impresión y los retrasos en la entrega de sus materiales publicitarios.",
   "sig_cta_title": "¿Listo para dinamizar sus pantallas?",
-
-
-
-
-
-		"payroll_page_title":        "AtaPayroll – Gestión de nómina | Atalou Microsystem",
-
-"payroll_nav_home":          "Inicio",
-"payroll_nav_about":         "Acerca de",
-"payroll_nav_features":      "Funcionalidades",
-"payroll_nav_how":           "Cómo funciona",
-"payroll_nav_contact":       "Contacto",
-
-"payroll_badge":             "Gestión de nómina",
-"payroll_hero_title_1":      "AtaPayroll",
-"payroll_hero_title_2":      "por Atalou",
-"payroll_hero_text":         "Una solution completa para automatizar la gestión de nómina, y declaraciones sociales — diseñada para todas empresas de todo lado. ",
-"payroll_hero_btn_contact":  "Contáctenos",
-"payroll_hero_btn_features": "Ver funcionalidades",
-
-"payroll_stat1":             "Conforme",
-"payroll_stat2":             "Soporte activo",
-"payroll_stat3":             "Multi-moneda",
-
-"payroll_about_title":       "¿Qué es AtaPayroll?",
-"payroll_about_p1":          "Atalou Nómina es una solución de gestión de nómina diseñada para empresas que operan en Haití y el Caribe. Automatiza todo el ciclo de remuneración: cálculo de salarios, cotizaciones sociales, gestión de ausencias y generación de recibos de sueldo.",
-"payroll_about_p2":          "Con una interfaz intuitiva y cumplimiento de las normativas locales, permite a los equipos de RRHH ahorrar tiempo, reducir errores y garantizar la transparencia en el procesamiento de salarios.",
-"payroll_about_p3":          "Se adapta a organizaciones de todos los tamaños  PYMES, grandes empresas y ONG.",
-
-"payroll_features_title":    "¿Por qué elegir AtaPayroll?",
-
-"payroll_feature1_title":    "Cálculo automático de nómina",
-"payroll_feature1_text":     "Salarios base, horas extra, bonificaciones y deducciones calculados automáticamente en cada ciclo de nómina.",
-"payroll_feature2_title":    "Recibos de sueldo instantáneos",
-"payroll_feature2_text":     "Generación y distribución digital de recibos de sueldo con un clic, accesibles en cualquier momento por los empleados.",
-"payroll_feature3_title":    "Gestión de vacaciones y ausencias",
-"payroll_feature3_text":     "Seguimiento en tiempo real de vacaciones, bajas por enfermedad, maternidad y ausencias con impacto automático en la nómina.",
-"payroll_feature4_title":    "Cumplimiento normativo",
-"payroll_feature4_text":     "Cumplimiento de las obligaciones legales haitianas: cotizaciones ONA, OFATMA, impuesto sobre la renta y declaraciones sociales.",
-"payroll_feature5_title":    "Multi-moneda",
-"payroll_feature5_text":     "Gestión simultánea en todas las monedas según los contratos de sus empleados.",
-"payroll_feature6_title":    "Informes y análisis de RRHH",
-"payroll_feature6_text":     "Paneles de control e informes detallados sobre la masa salariale, costos por departamento y tendencias de RRHH.",
-"payroll_feature7_title":    "Gestión multi-empleados",
-"payroll_feature7_text":     "Gestione decenas o cientos de empleados con perfiles individualizados, categorías y estructuras salariales diferentes.",
-"payroll_feature8_title":    "Seguridad y confidencialidad",
-"payroll_feature8_text":     "Datos cifrados, acceso por roles y registros de auditoría para garantizar la confidencialidad de la información salarial.",
-"payroll_feature9_title":    "Integración sencilla",
-"payroll_feature9_text":     "Compatible con sus herramientas existentes: QuickBooks, ACCPAC, reloj biométrico y ATAPOS.",
-
-"payroll_how_title":         "¿Cómo funciona?",
-"payroll_how_sub":           "Un proceso simple y estructurado para garantizar una nómina precisa en cada ciclo.",
-
-"payroll_step1_title":       "Configuración de empleados",
-"payroll_step1_text":        "Cree los perfiles de sus empleados: contrato, salario base, beneficios, cotizaciones y departamento.",
-"payroll_step2_title":       "Recopilación de datos del mes",
-"payroll_step2_text":        "El sistema integra automáticamente las ausencias, horas extra y bonificaciones del período.",
-"payroll_step3_title":       "Cálculo y validación",
-"payroll_step3_text":        "La nómina se calcula automáticamente. El responsable de RRHH valida o ajusta antes de finalizar.",
-"payroll_step4_title":       "Distribución de recibos",
-"payroll_step4_text":        "Los recibos de sueldo se generan y envían digitalmente a cada empleado en segundos.",
-"payroll_step5_title":       "Informes y archivado",
-"payroll_step5_text":        "Todos los ciclos de nómina quedan archivados y accesibles para auditorías, declaraciones fiscales o análisis de RRHH.",
-
-"payroll_cta_title":         "¿Listo para simplificar su gestión de nómina?",
-"payroll_cta_sub":           "Contacte a nuestro equipo para una demostración personalizada y descubra cómo Atalou Nómina puede transformar su departamento de RRHH.",
-"payroll_cta_btn":           "Solicitar una demostración"
-
-}
+  "payroll_page_title": "AtaPayroll – Gestión de nómina | Atalou Microsystem",
+  "payroll_nav_home": "Inicio",
+  "payroll_nav_about": "Acerca de",
+  "payroll_nav_features": "Funcionalidades",
+  "payroll_nav_how": "Cómo funciona",
+  "payroll_nav_contact": "Contacto",
+  "payroll_badge": "Gestión de nómina",
+  "payroll_hero_title_1": "AtaPayroll",
+  "payroll_hero_title_2": "por Atalou",
+  "payroll_hero_text": "Una solución completa para automatizar la gestión de nómina y declaraciones sociales — diseñada para todas las empresas.",
+  "payroll_hero_btn_contact": "Contáctenos",
+  "payroll_hero_btn_features": "Ver funcionalidades",
+  "payroll_stat1": "Conforme",
+  "payroll_stat2": "Soporte activo",
+  "payroll_stat3": "Multi-moneda",
+  "payroll_about_title": "¿Qué es AtaPayroll?",
+  "payroll_about_p1": "Atalou Nómina es una solución de gestión de nómina diseñada para empresas que operan en Haití y el Caribe. Automatiza todo el ciclo de remuneración: cálculo de salarios, cotizaciones sociales, gestión de ausencias y generación de recibos de sueldo.",
+  "payroll_about_p2": "Con una interfaz intuitiva y cumplimiento de las normativas locales, permite a los equipos de RRHH ahorrar tiempo, reducir errores y garantizar la transparencia en el procesamiento de salarios.",
+  "payroll_about_p3": "Se adapta a organizaciones de todos los tamaños: PYMES, grandes empresas y ONG.",
+  "payroll_features_title": "¿Por qué elegir AtaPayroll?",
+  "payroll_feature1_title": "Cálculo automático de nómina",
+  "payroll_feature1_text": "Salarios base, horas extra, bonificaciones y deducciones calculados automáticamente en cada ciclo de nómina.",
+  "payroll_feature2_title": "Recibos de sueldo instantáneos",
+  "payroll_feature2_text": "Generación y distribución digital de recibos de sueldo con un clic, accesibles en cualquier momento por los empleados.",
+  "payroll_feature3_title": "Gestión de vacaciones y ausencias",
+  "payroll_feature3_text": "Seguimiento en tiempo real de vacaciones, bajas por enfermedad, maternidad y ausencias con impacto automático en la nómina.",
+  "payroll_feature4_title": "Cumplimiento normativo",
+  "payroll_feature4_text": "Cumplimiento de las obligaciones legales haitianas: cotizaciones ONA, OFATMA, impuesto sobre la renta y declaraciones sociales.",
+  "payroll_feature5_title": "Multi-moneda",
+  "payroll_feature5_text": "Gestión simultánea en todas las monedas según los contratos de sus empleados.",
+  "payroll_feature6_title": "Informes y análisis de RRHH",
+  "payroll_feature6_text": "Paneles de control e informes detallados sobre la masa salarial, costos por departamento y tendencias de RRHH.",
+  "payroll_feature7_title": "Gestión multi-empleados",
+  "payroll_feature7_text": "Gestione decenas o cientos de empleados con perfiles individualizados, categorías y estructuras salariales diferentes.",
+  "payroll_feature8_title": "Seguridad y confidencialidad",
+  "payroll_feature8_text": "Datos cifrados, acceso por roles y registros de auditoría para garantizar la confidencialidad de la información salarial.",
+  "payroll_feature9_title": "Integración sencilla",
+  "payroll_feature9_text": "Compatible con sus herramientas existentes: QuickBooks, ACCPAC, reloj biométrico y ATAPOS.",
+  "payroll_how_title": "¿Cómo funciona?",
+  "payroll_how_sub": "Un proceso simple y estructurado para garantizar una nómina precisa en cada ciclo.",
+  "payroll_step1_title": "Configuración de empleados",
+  "payroll_step1_text": "Cree los perfiles de sus empleados: contrato, salario base, beneficios, cotizaciones y departamento.",
+  "payroll_step2_title": "Recopilación de datos del mes",
+  "payroll_step2_text": "El sistema integra automáticamente las ausencias, horas extra y bonificaciones del período.",
+  "payroll_step3_title": "Cálculo y validación",
+  "payroll_step3_text": "La nómina se calcula automáticamente. El responsable de RRHH valida o ajusta antes de finalizar.",
+  "payroll_step4_title": "Distribución de recibos",
+  "payroll_step4_text": "Los recibos de sueldo se generan y envían digitalmente a cada empleado en segundos.",
+  "payroll_step5_title": "Informes y archivado",
+  "payroll_step5_text": "Todos los ciclos de nómina quedan archivados y accesibles para auditorías, declaraciones fiscales o análisis de RRHH.",
+  "payroll_cta_title": "¿Listo para simplificar su gestión de nómina?",
+  "payroll_cta_sub": "Contacte a nuestro equipo para una demostración personalizada y descubra cómo Atalou Nómina puede transformar su departamento de RRHH.",
+  "payroll_cta_btn": "Solicitar una demostración"
+};
