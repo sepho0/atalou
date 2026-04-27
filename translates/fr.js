@@ -94,6 +94,18 @@ window.__TRANSLATIONS__['fr'] = {
   "services_other_f2": "Systèmes de géolocalisation GPS pour véhicules et personnes",
   "services_other_f3": "Recherche personnalisée et R&D de solutions technologiques",
   "services_other_f4": "Système de point de vente ATA (ATA POS)",
+		
+		"services_payroll_title": "Gestion de Paie",
+"services_payroll_f1": "Calcul automatique des salaires et cotisations",
+"services_payroll_f2": "Gestion des congés et absences",
+"services_payroll_f3": "Génération des bulletins de paie",
+"services_payroll_f4": "Rapports et conformité fiscale",
+
+"services_signage_title": "Signage Digital",
+"services_signage_f1": "Diffusion de contenus multimédias sur écrans",
+"services_signage_f2": "Gestion centralisée depuis une seule plateforme",
+"services_signage_f3": "Programmation et planification des diffusions",
+"services_signage_f4": "Compatible avec tous types d'écrans",
   "services_view_more": "Voir Plus",
   "part_tag": "Partenaires",
   "part_title": "Nos partenaires de confiance",

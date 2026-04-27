@@ -94,6 +94,19 @@ window.__TRANSLATIONS__['en'] = {
   "services_other_f2": "GPS geolocation systems for vehicles and people",
   "services_other_f3": "Custom research and R&D of technology solutions",
   "services_other_f4": "ATA point of sale system (ATA POS)",
+
+"services_payroll_title": "Payroll Management",
+"services_payroll_f1": "Automatic salary and contribution calculation",
+"services_payroll_f2": "Leave and absence management",
+"services_payroll_f3": "Pay slip generation",
+"services_payroll_f4": "Reports and tax compliance",
+
+"services_signage_title": "Digital Signage",
+"services_signage_f1": "Multimedia content broadcasting on screens",
+"services_signage_f2": "Centralized management from a single platform",
+"services_signage_f3": "Scheduling and programming of broadcasts",
+"services_signage_f4": "Compatible with all screen types",
+
   "services_view_more": "See More",
   "part_tag": "Partners",
   "part_title": "Our trusted partners",

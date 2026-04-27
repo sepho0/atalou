@@ -16,23 +16,23 @@ async function switchPageLang(lang) {
             if (textEl) textEl.textContent = config.text;
         }
 
-        // 2. CHARGEMENT DES TRADUCTIONS (sans fetch — compatible file://)
+     
         const t = window.__TRANSLATIONS__?.[lang];
         if (!t) throw new Error(`Traduction introuvable pour la langue: ${lang}`);
 
-        // 3. MISE À JOUR DES BOUTONS DE LANGUE ACTIFS
+ 
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.l === lang);
         });
 
-        // Helper pour injecter du texte par ID
+        
         const setText = (id, value) => {
             if (value === undefined || value === null) return;
             const el = document.getElementById(id);
             if (el) el.textContent = value;
         };
 
-        // Mise à jour automatique via data-i18n
+      
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const raw = el.getAttribute('data-i18n');
             const value = t[raw] ?? t[raw.replaceAll('.', '_')];
