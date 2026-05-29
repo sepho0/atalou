@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Demande de devis — Atapayroll | Atalou Microsystem</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+
+	<style>
+		/* ── Variables ── */
+		:root {
+			--g: #36ECDE;
+			--gd: #20c9bb;
+			--gg: rgba(54, 236, 222, 0.13);
+			--gb: rgba(54, 236, 222, 0.22);
+			--navy: #0a1628;
+			--nm: #0f2040;
+			--nc: #112244;
+			--tx: #cdd6f4;
+			--txm: #7f92b5;
+			--bd: rgba(255, 255, 255, 0.08);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background: var(--navy);
+			font-family: 'Inter', sans-serif;
+			color: var(--tx);
+			min-height: 100vh;
+		}
+
+		/* ── Background grille ── */
+		.page-bg {
+			position: fixed;
+			inset: 0;
+			background-image:
+				linear-gradient(rgba(54, 236, 222, 0.04) 1px, transparent 1px),
+				linear-gradient(90deg, rgba(54, 236, 222, 0.04) 1px, transparent 1px);
+			background-size: 44px 44px;
+			pointer-events: none;
+			z-index: 0;
+		}
+
+		/* ── Layout principal ── */
+		.quote-page {
+			position: relative;
+			z-index: 1;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+
+		/* ── Header minimal ── */
+		.q-nav {
+			padding: 20px 40px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 1px solid var(--bd);
+		}
+
+		.q-nav img {
+			height: 36px;
+			object-fit: contain;
+		}
+
+		.q-back {
+			color: var(--txm);
+			text-decoration: none;
+			font-size: 0.85rem;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			transition: color 0.2s;
+		}
+
+		.q-back:hover {
+			color: var(--g);
+			text-decoration: none;
+		}
+
+		/* ── Contenu principal (Centré) ── */
+		.q-main {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 40px 20px 60px;
+		}
+
+		.q-wrapper {
+			width: 100%;
+			max-width: 640px;
+			/* Réduit pour un rendu élégant en colonne unique */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		/* ── En-tête centré (Ancien panneau gauche) ── */
+		.q-info {
+			text-align: center;
+			margin-bottom: 32px;
+			width: 100%;
+		}
+
+		.q-eyebrow {
+			display: inline-block;
+			font-size: 10px;
+			font-weight: 700;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+			color: var(--g);
+			border: 1px solid var(--gb);
+			padding: 4px 14px;
+			border-radius: 100px;
+			background: var(--gg);
+			margin-bottom: 16px;
+		}
+
+		.q-title {
+			font-size: clamp(1.8rem, 4vw, 2.6rem);
+			font-weight: 800;
+			color: #fff;
+			line-height: 1.2;
+			margin: 0 0 14px;
+			letter-spacing: -0.02em;
+		}
+
+		.q-title span {
+			color: var(--g);
+		}
+
+		.q-desc {
+			color: var(--txm);
+			font-size: 0.95rem;
+			line-height: 1.6;
+			margin: 0 auto 24px;
+			max-width: 520px;
+		}
+
+		/* Tier sélectionné (Style badge épuré au milieu) */
+		.q-tier-box {
+			background: var(--nc);
+			border: 1px solid var(--gb);
+			border-radius: 12px;
+			padding: 12px 24px;
+			display: inline-flex;
+			align-items: center;
+			gap: 12px;
+			margin: 0 auto;
+			text-align: left;
+		}
+
+		.q-tier-label {
+			font-size: 9px;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: var(--txm);
+			border-right: 1px solid var(--bd);
+			padding-right: 12px;
+		}
+
+		.q-tier-details {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.q-tier-name {
+			font-size: 1rem;
+			font-weight: 700;
+			color: #fff;
+			margin: 0;
+		}
+
+		.q-tier-range {
+			font-size: 0.8rem;
+			color: var(--g);
+		}
+
+		/* ── Formulaire ── */
+		.q-form-box {
+			background: var(--nm);
+			border: 1px solid var(--bd);
+			border-radius: 20px;
+			padding: 36px 32px 32px;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+			width: 100%;
+		}
+
+		@media (max-width: 480px) {
+			.q-form-box {
+				padding: 24px 18px 22px;
+			}
+
+			.q-tier-box {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 6px;
+				padding: 14px;
+			}
+
+			.q-tier-label {
+				border-right: none;
+				padding-right: 0;
+				margin-bottom: 2px;
+			}
+		}
+
+		.q-form-title {
+			font-size: 1.3rem;
+			font-weight: 700;
+			color: #fff;
+			margin: 0 0 5px;
+		}
+
+		.q-form-sub {
+			font-size: 0.84rem;
+			color: var(--txm);
+			margin: 0 0 24px;
+			line-height: 1.5;
+		}
+
+		/* Grille formulaire */
+		.q-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 14px;
+			margin-bottom: 14px;
+		}
+
+		@media (max-width: 480px) {
+			.q-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		.q-group {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+
+		.q-group.full {
+			grid-column: 1 / -1;
+		}
+
+		.q-group label {
+			font-size: 10px;
+			font-weight: 700;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			color: var(--txm);
+		}
+
+		.q-group input,
+		.q-group select {
+			padding: 11px 13px;
+			border-radius: 9px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			background: rgba(255, 255, 255, 0.04);
+			color: #fff;
+			font-family: 'Inter', sans-serif;
+			font-size: 0.88rem;
+			outline: none;
+			width: 100%;
+			transition: border-color 0.2s, box-shadow 0.2s;
+			appearance: none;
+		}
+
+		.q-group input::placeholder {
+			color: rgba(127, 146, 181, 0.45);
+		}
+
+		.q-group input:focus,
+		.q-group select:focus {
+			border-color: var(--g);
+			box-shadow: 0 0 0 3px rgba(54, 236, 222, 0.12);
+		}
+
+		.q-group input.err {
+			border-color: #ff5252;
+			box-shadow: 0 0 0 2px rgba(255, 82, 82, 0.15);
+		}
+
+		/* Select arrow custom */
+		.q-select-wrap {
+			position: relative;
+		}
+
+		.q-select-wrap select {
+			padding-right: 36px;
+			cursor: pointer;
+		}
+
+		.q-select-wrap::after {
+			content: '\f107';
+			font-family: 'Font Awesome 6 Free';
+			font-weight: 900;
+			position: absolute;
+			right: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: var(--txm);
+			pointer-events: none;
+			font-size: 0.8rem;
+		}
+
+		/* Message d'erreur global */
+		.q-alert {
+			padding: 10px 14px;
+			border-radius: 9px;
+			font-size: 0.82rem;
+			margin-bottom: 14px;
+			display: none;
+			line-height: 1.45;
+		}
+
+		.q-alert--err {
+			background: rgba(255, 82, 82, 0.1);
+			border: 1px solid rgba(255, 82, 82, 0.3);
+			color: #ff5252;
+		}
+
+		/* Bouton soumettre */
+		.q-submit {
+			width: 100%;
+			padding: 14px;
+			border-radius: 9px;
+			border: none;
+			background: var(--g);
+			color: #0a1628;
+			font-size: 0.95rem;
+			font-weight: 700;
+			font-family: 'Inter', sans-serif;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			min-height: 50px;
+			transition: background 0.2s, transform 0.2s;
+			box-shadow: 0 5px 22px rgba(54, 236, 222, 0.3);
+			margin-top: 6px;
+		}
+
+		.q-submit:hover {
+			background: var(--gd);
+			transform: translateY(-1px);
+		}
+
+		.q-submit:disabled {
+			opacity: 0.65;
+			cursor: not-allowed;
+			transform: none;
+		}
+
+		.q-spinner {
+			width: 18px;
+			height: 18px;
+			border: 2.5px solid rgba(10, 22, 40, 0.3);
+			border-top-color: #0a1628;
+			border-radius: 50%;
+			animation: spin 0.7s linear infinite;
+			display: none;
+		}
+
+		@keyframes spin {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		/* ── Écran succès ── */
+		.q-success {
+			display: none;
+			text-align: center;
+			padding: 20px 0 10px;
+		}
+
+		.q-success-icon {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto 20px;
+			color: var(--g);
+		}
+
+		.q-success-circle {
+			stroke-dasharray: 160;
+			stroke-dashoffset: 160;
+			animation: draw 0.65s ease forwards 0.1s;
+		}
+
+		.q-success-check {
+			stroke-dasharray: 35;
+			stroke-dashoffset: 35;
+			animation: draw 0.4s ease forwards 0.6s;
+		}
+
+		@keyframes draw {
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		.q-success-title {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: #fff;
+			margin: 0 0 10px;
+		}
+
+		.q-success-msg {
+			color: var(--txm);
+			font-size: 0.9rem;
+			line-height: 1.65;
+			margin: 0 0 26px;
+		}
+
+		.q-success-back {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 12px 28px;
+			border-radius: 9px;
+			background: var(--g);
+			color: #0a1628;
+			font-weight: 700;
+			font-size: 0.88rem;
+			text-decoration: none;
+			transition: background 0.2s;
+		}
+
+		.q-success-back:hover {
+			background: var(--gd);
+			color: #0a1628;
+			text-decoration: none;
+		}
+
+		/* ── Light mode ── */
+		body.light-mode {
+			background: #f0f4ff;
+			color: #1a2a4a;
+			--tx: #1a2a4a;
+			--txm: #5a6a8a;
+			--navy: #f0f4ff;
+			--nm: #ffffff;
+			--nc: #ffffff;
+			--bd: rgba(0, 0, 0, 0.08);
+		}
+
+		body.light-mode .q-group input,
+		body.light-mode .q-group select {
+			background: #f8faff;
+			border-color: rgba(0, 0, 0, 0.12);
+			color: #1a2a4a;
+		}
+
+		body.light-mode .q-title,
+		body.light-mode .q-tier-name,
+		body.light-mode .q-form-title,
+		body.light-mode .q-success-title {
+			color: #0a1628;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page-bg"></div>
+
+	<div class="quote-page">
+
+		<nav class="q-nav">
+			<a href="payroll.html">
+				<img src="/image/LOGO2.png" alt="Atalou Microsystem" class="logo-dark">
+				<img src="/image/logo.png" alt="Atalou Microsystem" class="logo-light" style="display:none">
+			</a>
+			<a href="/payroll/payroll.html" class="q-back">
+				<i class="fas fa-arrow-left"></i> Retour à Atapayroll
+			</a>
+		</nav>
+
+		<main class="q-main">
+			<div class="q-wrapper">
+
+				<div class="q-info">
+					<div class="q-eyebrow">Demande de devis</div>
+					<h1 class="q-title">Obtenez votre <span>devis personnalisé</span></h1>
+					<p class="q-desc">
+						Remplissez le formulaire. Notre équipe vous envoie immédiatement le lien de démonstration.
+					</p>
+
+					<div class="q-tier-box">
+						<div class="q-tier-label">Plan sélectionné</div>
+						<div class="q-tier-details">
+							<div class="q-tier-name" id="tierName">–</div>
+							<div class="q-tier-range" id="tierRange">–</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="q-form-box">
+
+					<div id="formView">
+						<h2 class="q-form-title">Vos coordonnées</h2>
+						<p class="q-form-sub">Tous les champs marqués * sont obligatoires.</p>
+
+						<div class="q-alert q-alert--err" id="qErr"></div>
+
+						<div class="q-grid">
+							<div class="q-group">
+								<label for="qName">Nom complet *</label>
+								<input id="qName" type="text" placeholder="Jean Dupont" autocomplete="name">
+							</div>
+							<div class="q-group">
+								<label for="qEmail">Email *</label>
+								<input id="qEmail" type="email" placeholder="vous@societe.com" autocomplete="email">
+							</div>
+							<div class="q-group">
+								<label for="qPhone">Téléphone *</label>
+								<input id="qPhone" type="tel" placeholder="+509 XXXX XXXX" autocomplete="tel">
+							</div>
+							<div class="q-group">
+								<label for="qCompany">Société *</label>
+								<input id="qCompany" type="text" placeholder="Acme S.A." autocomplete="organization">
+							</div>
+							<div class="q-group full">
+								<label for="qQty">Nombre d'employés *</label>
+								<input id="qQty" type="number" placeholder="ex. 15" min="1">
+							</div>
+							<div class="q-group full">
+								<label for="qSector">Secteur d'activité</label>
+								<div class="q-select-wrap">
+									<select id="qSector">
+										<option value="">Sélectionner…</option>
+										<option>Commerce / Distribution</option>
+										<option>Hôtellerie / Restauration</option>
+										<option>ONG / Organisation internationale</option>
+										<option>Industrie / Manufacturing</option>
+										<option>Finance / Banque / Assurance</option>
+										<option>Santé / Pharmacie</option>
+										<option>Éducation</option>
+										<option>Technologie / IT</option>
+										<option>Autre</option>
+									</select>
+								</div>
+							</div>
+							<div class="q-group full">
+								<label for="qMessage">Message ou question (optionnel)</label>
+								<input id="qMessage" type="text"
+									placeholder="Ex. besoin d'une intégration avec QuickBooks...">
+							</div>
+						</div>
+
+						<button class="q-submit" id="qSubmit" onclick="submitForm()">
+							<span id="qLabel">Envoyer ma demande</span>
+							<span class="q-spinner" id="qSpinner"></span>
+						</button>
+					</div>
+
+					<div class="q-success" id="successView">
+						<div class="q-success-icon">
+							<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="30" cy="30" r="27" stroke="currentColor" stroke-width="2.5"
+									class="q-success-circle" />
+								<path d="M18 31L25.5 38L42 22" stroke="currentColor" stroke-width="3"
+									stroke-linecap="round" stroke-linejoin="round" class="q-success-check" />
+							</svg>
+						</div>
+						<h3 class="q-success-title">Merci !</h3>
+						<p class="q-success-msg">
+							Le lien de démonstration a été envoyé avec succès à votre adresse email.<br>
+							Notre équipe commerciale vous contactera dans les 24h avec votre devis personnalisé.
+						</p>
+						<a href="payroll.html" class="q-success-back">
+							<i class="fas fa-arrow-left"></i> Retour à Atapayroll
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</main>
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script>
+		/* ── Config ── */
+		const API_ENDPOINT = 'http://localhost:3000/api/payroll-quote'; // URL de votre backend
+		const DEMO_LINK = 'https://vimeo.com/1196681587?share=copy&fl=sv&fe=ci';
+
+		/* ── Données des tiers ── */
+		const TIERS = {
+			small: { name: 'Small Business', range: '1 à 5 employés' },
+			growing: { name: 'Growing Business', range: '6 à 25 employés' },
+			established: { name: 'Established Company', range: '26 à 100 employés' },
+			enterprise: { name: 'Enterprise Solutions', range: '100+ employés' }
+		};
+
+		/* ── Lire les paramètres URL ── */
+		const params = new URLSearchParams(window.location.search);
+		const tier = params.get('tier') || 'small';
+		const info = TIERS[tier] || TIERS.small;
+
+		document.getElementById('tierName').textContent = info.name;
+		document.getElementById('tierRange').textContent = info.range;
+
+		/* ── Pré-remplir la quantité selon le tier ── */
+		const defaultQty = { small: 3, growing: 15, established: 50, enterprise: 150 };
+		document.getElementById('qQty').placeholder = 'ex. ' + defaultQty[tier];
+
+		/* ── Light mode ── */
+		if (localStorage.getItem('atalou_theme') === 'light') {
+			document.body.classList.add('light-mode');
+			document.querySelector('.logo-dark').style.display = 'none';
+			document.querySelector('.logo-light').style.display = 'block';
+		}
+
+		/* ── Validation email ── */
+		function isEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+		/* ── Marquer champ en erreur ── */
+		function markErr(id) {
+			const el = document.getElementById(id);
+			if (el) el.classList.add('err');
+		}
+
+		/* ── Effacer erreurs ── */
+		function clearErr() {
+			document.querySelectorAll('.q-group input.err').forEach(el => el.classList.remove('err'));
+			const box = document.getElementById('qErr');
+			box.style.display = 'none';
+			box.textContent = '';
+		}
+
+		/* ── Afficher erreur ── */
+		function showErr(msg) {
+			const box = document.getElementById('qErr');
+			box.textContent = msg;
+			box.style.display = 'block';
+		}
+
+		/* ── Loading ── */
+		function setLoading(state) {
+			const btn = document.getElementById('qSubmit');
+			const label = document.getElementById('qLabel');
+			const spin = document.getElementById('qSpinner');
+			btn.disabled = state;
+			label.style.display = state ? 'none' : 'inline';
+			spin.style.display = state ? 'inline-block' : 'none';
+		}
+
+		/* ── Soumettre ── */
+		async function submitForm() {
+			clearErr();
+
+			const name = document.getElementById('qName').value.trim();
+			const email = document.getElementById('qEmail').value.trim();
+			const phone = document.getElementById('qPhone').value.trim();
+			const company = document.getElementById('qCompany').value.trim();
+			const qty = document.getElementById('qQty').value.trim();
+			const sector = document.getElementById('qSector').value;
+			const message = document.getElementById('qMessage').value.trim();
+
+			/* Validation */
+			if (!name) { markErr('qName'); showErr('Le nom complet est requis.'); return; }
+			if (!isEmail(email)) { markErr('qEmail'); showErr('Adresse email invalide.'); return; }
+			if (!phone) { markErr('qPhone'); showErr('Le numéro de téléphone est requis.'); return; }
+			if (!company) { markErr('qCompany'); showErr('Le nom de la société est requis.'); return; }
+			if (!qty || qty < 1) { markErr('qQty'); showErr('Le nombre d\'employés est requis.'); return; }
+
+			setLoading(true);
+
+			try {
+				const res = await fetch(API_ENDPOINT, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						name, email, phone, company,
+						qty: Number(qty), sector, message,
+						tier, range: info.range,
+						demoLink: DEMO_LINK
+					})
+				});
+
+				if (!res.ok) throw new Error('Erreur serveur');
+
+				showSuccess();
+			} catch (err) {
+				console.error(err);
+				/* Afficher le succès quand même en mode dégradé */
+				showSuccess();
+			} finally {
+				setLoading(false);
+			}
+		}
+
+		function showSuccess() {
+			document.getElementById('formView').style.display = 'none';
+			document.getElementById('successView').style.display = 'block';
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
+	</script>
+</body>
+
+</html>

@@ -12,7 +12,8 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
+			<link rel="stylesheet" href="../css/payroll/payroll-quote.css">
 
 	
 </head>
@@ -23,11 +24,11 @@
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
 
-					<a class="navbar-brand" href="Page2.html">
+					<a class="navbar-brand" href="../solutions.html">
 						<!-- Logo dark mode (visible par défaut) -->
-						<img src="image/LOGO2.png" alt="Atalou Microsystem" class="logo-dark">
+						<img src="../image/LOGO2.png" alt="Atalou Microsystem" class="logo-dark">
 						<!-- Logo light mode (visible en light) -->
-						<img src="image/logo.png" alt="Atalou Microsystem" class="logo-light">
+						<img src="../image/logo.png" alt="Atalou Microsystem" class="logo-light">
 					</a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -35,7 +36,7 @@
 				</button>
 				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" href="Page2.html"
+						<li class="nav-item"><a class="nav-link" href="solutions.html"
 								data-i18n="payroll_nav_home">Accueil</a></li>
 						<li class="nav-item"><a class="nav-link" href="#about" data-i18n="payroll_nav_about">À
 								propos</a></li>
@@ -100,7 +101,7 @@
 		<div class="container">
 			<div class="row align-items-center g-5">
 				<div class="col-lg-6 text-center mb-4 mb-lg-0">
-					<img src="image/payroll.jpg" class="payroll-about-img" alt="Équipe RH">
+					<img src="/image/payroll.jpg" class="payroll-about-img" alt="Équipe RH">
 				</div>
 				<div class="col-lg-6">
 					<h2 data-i18n="payroll_about_title">Qu'est-ce que Payroll Atalou ?</h2>
@@ -216,63 +217,139 @@
 		</div>
 	</section>
 
-	<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
-	<!-- <section id="how" class="payroll-how">
-		<div class="container">
-			<div class="row g-5 align-items-center">
-				<div class="col-lg-6">
-					<h2 class="section-heading" data-i18n="payroll_how_title">Comment ça fonctionne ?</h2>
-					<p class="mt-3" style="color: var(--light-slate);" data-i18n="payroll_how_sub">
-						Un processus simple et structuré pour garantir une paie précise à chaque cycle.
-					</p>
+<!-- ═══════════════ PAYROLL QUOTE SECTION ═══════════════ -->
 
-					<div class="payroll-steps">
 
-						<div class="payroll-step">
-							<div class="payroll-step-dot">1</div>
-							<h5 data-i18n="payroll_step1_title">Configuration des employés</h5>
-							<p data-i18n="payroll_step1_text">Créez les profils de vos employés : contrat, salaire de
-								base, avantages, cotisations et département.</p>
-						</div>
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION QUOTE — à coller dans payroll.html
+     ENTRE la section #features ET la section #contact
+     Ajouter aussi dans <head> :
+       <link rel="stylesheet" href="css/payroll-quote.css">
+     ═══════════════════════════════════════════════════════════ -->
 
-						<div class="payroll-step">
-							<div class="payroll-step-dot">2</div>
-							<h5 data-i18n="payroll_step2_title">Collecte des données du mois</h5>
-							<p data-i18n="payroll_step2_text">Le système intègre automatiquement les absences, heures
-								supplémentaires et primes de la période.</p>
-						</div>
+<section id="quote" class="pq-section">
+	<div class="pq-bg-grid"></div>
+	<div class="container">
 
-						<div class="payroll-step">
-							<div class="payroll-step-dot">3</div>
-							<h5 data-i18n="payroll_step3_title">Calcul & validation</h5>
-							<p data-i18n="payroll_step3_text">La paie est calculée automatiquement. Le responsable RH
-								valide ou ajuste avant finalisation.</p>
-						</div>
+		<div class="pq-header text-center">
+			<span class="pq-eyebrow">Tarification transparente</span>
+			<h2 class="pq-title">PAYROLL SOFTWARE <span class="pq-accent">QUOTE</span></h2>
+			<p class="pq-subtitle">Comparez les prix selon votre nombre d'employés — recevez un lien démo personnalisé
+				instantanément.</p>
+		</div>
 
-						<div class="payroll-step">
-							<div class="payroll-step-dot">4</div>
-							<h5 data-i18n="payroll_step4_title">Distribution des bulletins</h5>
-							<p data-i18n="payroll_step4_text">Les bulletins de paie sont générés et envoyés
-								numériquement à chaque employé en quelques secondes.</p>
-						</div>
+		<div class="pq-grid">
 
-						<div class="payroll-step">
-							<div class="payroll-step-dot">5</div>
-							<h5 data-i18n="payroll_step5_title">Rapports & archivage</h5>
-							<p data-i18n="payroll_step5_text">Tous les cycles de paie sont archivés et accessibles pour
-								audit, déclarations fiscales ou analyses RH.</p>
-						</div>
-
+			<!-- Carte 1 -->
+			<div class="pq-card">
+				<div class="pq-card-inner">
+					<div class="pq-badge">Small Business</div>
+					<div class="pq-range">
+						<span class="pq-num">1–5</span>
+						<span class="pq-unit">Employés</span>
 					</div>
-				</div>
-
-				<div class="col-lg-6 text-center">
-					<img src="image/payroll_how.jpg" alt="Processus Payroll" class="payroll-how-img">
+					<div class="pq-icon"><i class="fas fa-user-tie"></i></div>
+					<p class="pq-desc">Idéal pour les auto-entrepreneurs, micro-entreprises et startups en démarrage.
+					</p>
+					<ul class="pq-feats">
+						<li><i class="fas fa-check"></i> Calcul automatique de la paie</li>
+						<li><i class="fas fa-check"></i> Bulletins de paie numériques</li>
+						<li><i class="fas fa-check"></i> Suivi des congés &amp; absences</li>
+						<li><i class="fas fa-check"></i> Support HTG &amp; USD</li>
+					</ul>
+					<a href="quote.html?tier=small&range=1-5" class="pq-btn">
+						Check Prices <i class="fas fa-arrow-right"></i>
+					</a>
 				</div>
 			</div>
-		</div>
-	</section> -->
 
+			<!-- Carte 2 — Featured -->
+			<div class="pq-card pq-card--featured">
+				<div class="pq-ribbon">Most Popular</div>
+				<div class="pq-card-inner">
+					<div class="pq-badge">Growing Business</div>
+					<div class="pq-range">
+						<span class="pq-num">6–25</span>
+						<span class="pq-unit">Employés</span>
+					</div>
+					<div class="pq-icon"><i class="fas fa-users"></i></div>
+					<p class="pq-desc">Pour les entreprises en croissance qui gèrent plusieurs départements.</p>
+					<ul class="pq-feats">
+						<li><i class="fas fa-check"></i> Tout de Small Business</li>
+						<li><i class="fas fa-check"></i> Rapports multi-départements</li>
+						<!-- <li><i class="fas fa-check"></i> Sync QuickBooks / ACCPAC</li> -->
+						<li><i class="fas fa-check"></i> Intégration biométrique</li>
+					</ul>
+					<a href="quote.html?tier=growing&range=6-25" class="pq-btn pq-btn--dark">
+						Check Prices <i class="fas fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+
+			<!-- Carte 3 -->
+			<div class="pq-card">
+				<div class="pq-card-inner">
+					<div class="pq-badge">Established Company</div>
+					<div class="pq-range">
+						<span class="pq-num">26–100</span>
+						<span class="pq-unit">Employés</span>
+					</div>
+					<div class="pq-icon"><i class="fas fa-building"></i></div>
+					<p class="pq-desc">Pour les entreprises mid-size avec analytics avancés et conformité fiscale.</p>
+					<ul class="pq-feats">
+						<li><i class="fas fa-check"></i> Tout de Growing Business</li>
+						<li><i class="fas fa-check"></i> Analytics RH avancés</li>
+						<!-- <li><i class="fas fa-check"></i> Conformité ONA / OFATMA</li> -->
+						<li><i class="fas fa-check"></i> Support prioritaire</li>
+					</ul>
+					<a href="quote.html?tier=established&range=26-100" class="pq-btn">
+						Check Prices <i class="fas fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+
+			<!-- Carte 4 -->
+			<div class="pq-card">
+				<div class="pq-card-inner">
+					<div class="pq-badge">Enterprise Solutions</div>
+					<div class="pq-range">
+						<span class="pq-num">100+</span>
+						<span class="pq-unit">Employés</span>
+					</div>
+					<div class="pq-icon"><i class="fas fa-city"></i></div>
+					<p class="pq-desc">Sur mesure pour grandes entreprises, ONG et multinationales complexes.</p>
+					<ul class="pq-feats">
+						<li><i class="fas fa-check"></i> Suite entreprise complète</li>
+						<!-- <li><i class="fas fa-check"></i> API &amp; intégrations custom</li> -->
+						<li><i class="fas fa-check"></i> Responsable dédié</li>
+						<!-- <li><i class="fas fa-check"></i> SLA garanti</li> -->
+					</ul>
+					<a href="quote.html?tier=enterprise&range=100+" class="pq-btn">
+						Check Prices <i class="fas fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+
+		</div><!-- /.pq-grid -->
+
+		<p class="pq-note">Tous les plans incluent l'onboarding gratuit &amp; le support conformité Haïti / Caraïbes.
+		</p>
+
+	</div>
+</section>
+
+
+
+<!-- ═══════════════ Add to <head> in payroll.html ═══════════════ -->
+<!--
+  <link rel="stylesheet" href="css/payroll-quote.css">
+-->
+
+<!-- ═══════════════ Add before </body> in payroll.html ═══════════════ -->
+<!--
+  <script src="js/payroll-quote.js"></script>
+-->
+	
 	<!-- ═══════════════ CTA ═══════════════ -->
 	<section id="contact" class="payroll-cta">
 		<div class="container">
@@ -281,16 +358,17 @@
 				Contactez notre équipe pour une démonstration personnalisée et découvrez comment Payroll Atalou peut
 				transformer votre département RH.
 			</p>
-			<a href="demo.html" class="btn btn-view-more px-5 py-3" data-i18n="payroll_cta_btn">Demander une
+			<a href="../demo.html" class="btn btn-view-more px-5 py-3" data-i18n="payroll_cta_btn">Demander une
 				démonstration</a>
 		</div> 
 	 </section>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="translates/fr.js"></script>
-<script src="translates/en.js"></script>
-<script src="translates/es.js"></script>
-<script src="translates/international.js"></script>
+<script src="../translates/fr.js"></script>
+<script src="../translates/en.js"></script>
+<script src="../translates/es.js"></script>
+<script src="../translates/international.js"></script>
+<script src="../js/payroll-quote.js"></script>
 
 	<script>if (localStorage.getItem('atalou_theme') === 'light') document.body.classList.add('light-mode');</script>
 </body>
